@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    # BOX SIZING
+\*------------------------------------*/
+
+/**
+ * `border-box` box-sizing makes much more sense than the
+ * browser default, as such as set this globally on all elements
+ *
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}

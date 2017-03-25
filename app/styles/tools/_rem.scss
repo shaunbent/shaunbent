@@ -1,0 +1,31 @@
+///*------------------------------------*\
+//    # REM
+//\*------------------------------------*/
+
+// 'rem' is a Sass function that converts pixel values to rem values
+// for whatever property is passed to it.
+//
+// @param {Int}     $value - The unit you want converting to a rem unit
+// @param {Int}     $baseline ($glue-base-font-size) - The base font size of the page
+//
+// @return {Int}    The supplied converted to a rem unit
+//
+// @author          Kaelig - https://github.com/guardian/guss-rem
+//
+@function rem($value, $baseline: $glue-global-font-size) {
+  @if $value == 0 {
+    @return 0; // 0rem -> 0
+  }
+
+  @if type-of($value) == list {
+    $result: ();
+
+    @each $e in $value {
+      $result: append($result, rem($e, $baseline));
+    }
+
+    @return $result;
+  }
+
+  @return if(type-of($value) == number and unit($value) == px, $value / $baseline * 1rem, $value);
+}

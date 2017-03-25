@@ -1,0 +1,77 @@
+/*------------------------------------*\
+    # BULLET
+\*------------------------------------*/
+
+/**
+ * The `bullet` pattern is used to align an icon with some text,
+ * similar to how a bullet point has the icon and the text
+ *
+    <span class="o-bullet [ o-bullet- | o-bullet+ | o-bullet--reverse ]">
+        <span class="o-bullet__icon gel-icon">
+            <svg>
+                <use xlink:href="#gel-icon-duration"></use>
+            </svg>
+        </span>
+        <span class="o-bullet__text">18:30 - 18:34</span>
+    </span>
+ *
+ */
+
+.o-bullet {
+  display: flex;
+}
+
+/**
+ * Lets hide the icon from browsers that do not cut the mustard
+ *
+ * 1. Scale the icon proportionally with the text
+ * 2. Align the icon vertically with the text
+ */
+
+.o-bullet__icon {
+  width: 1em; /* [1] */
+  height: 1em; /* [1] */
+  align-self: center;
+}
+
+/**
+ * If both icon and text are present we need to space them out
+ */
+
+.o-bullet__icon + .o-bullet__text {
+  margin-left: $base-spacing-unit;
+}
+
+/**
+ * Reduced spacing between icon and text
+ */
+
+.o-bullet\- {
+  .o-bullet__icon + .o-bullet__text {
+    margin-left: halve($base-spacing-unit);
+  }
+}
+
+/**
+ * Increased spacing between icon and text
+ */
+
+.o-bullet\+ {
+  .o-bullet__icon + .o-bullet__text {
+      margin-left: double($base-spacing-unit);
+  }
+}
+
+/**
+ * If you need the icon to sit after the text you can reverse
+ * the bullet
+ */
+
+.o-bullet--reverse {
+  direction: rtl;
+
+  .o-bullet__icon {
+    margin-right: 0;
+    margin-left: halve($base-spacing-unit);
+  }
+}

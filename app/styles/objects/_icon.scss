@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    # ICON
+\*------------------------------------*/
+
+/**
+ * A little abstraction to help with icons
+ */
+
+.o-icon {
+  display: inline-block;
+
+  svg {
+    width: inherit;
+    height: inherit;
+
+    vertical-align: top;
+
+    fill: currentColor;
+  }
+}

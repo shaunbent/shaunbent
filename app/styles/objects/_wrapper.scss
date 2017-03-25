@@ -1,0 +1,10 @@
+/*------------------------------------*\
+    # WRAPPER
+\*------------------------------------*/
+
+.o-wrap {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-right: triple($base-spacing-unit);
+  padding-left: triple($base-spacing-unit);
+}
