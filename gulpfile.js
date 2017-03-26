@@ -16,7 +16,7 @@ const autoprefixerOptions = {
     'last 2 versions',
     '> 1%',
   ],
-  flexbox: "no-2009",
+  flexbox: false,
 };
 const nanoOptions = {
   autoprefixer: { autoprefixerOptions },
