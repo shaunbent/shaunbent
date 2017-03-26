@@ -28,6 +28,14 @@ gulp.task('assets', () =>
     .pipe(gulp.dest('dist/assets/'))
 );
 
+gulp.task('manifest', () => {
+  gulp
+    .src([
+      'assets/manifest.json'
+    ])
+    .pipe(gulp.dest('dist/'))
+});
+
 gulp.task('styles', () =>
   gulp
     .src('app/styles/*.scss')
@@ -63,13 +71,15 @@ gulp.task('default', ['build'], () => {
   gulp.watch('app/styles/*.scss', ['styles']);
   gulp.watch('app/views/**/*.html', ['views']);
   gulp.watch('assets/**/*.{woff,woff2,txt,jpg,png,gif,svg,md}', ['assets']);
+  gulp.watch('assets/manifest.json', ['manifest']);
   gulp.watch([
     'dist/**/*.html',
+    'dist/manifest.json',
     'dist/assets/*.{woff,woff2,txt,jpg,png,gif,svg,md}',
     'dist/assets/styles/*.css'
   ]).on('change', browserSync.reload);
 });
 
 gulp.task('build', callback => {
-  runSequence('clean', 'assets', 'views', 'styles', callback);
+  runSequence('clean', 'assets', 'manifest', 'views', 'styles', callback);
 });
