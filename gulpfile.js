@@ -11,10 +11,15 @@ const $ = gulpLoadPlugins();
 
 // configs
 const sassOptions = { outputStyle: 'nested' };
-const supportedBrowsers = ['last 2 versions', '> 1%'];
-const autoprefixerOptions = { browsers: supportedBrowsers };
+const autoprefixerOptions = {
+  browsers: [
+    'last 2 versions',
+    '> 1%',
+  ],
+  flexbox: "no-2009",
+};
 const nanoOptions = {
-  autoprefixer: { browsers: supportedBrowsers },
+  autoprefixer: { autoprefixerOptions },
   convertValues: { length: false, boolean: false },
   mergeRules: false
 };
@@ -23,15 +28,15 @@ const nanoOptions = {
 gulp.task('assets', () =>
   gulp
     .src([
-      'assets/**/*.{woff,woff2,txt,jpg,png,gif,svg,md}'
+      'assets/**/*.{woff,woff2,txt,jpg,png,gif,svg,md,js}'
     ])
     .pipe(gulp.dest('dist/assets/'))
 );
 
-gulp.task('manifest', () => {
+gulp.task('root', () => {
   gulp
     .src([
-      'assets/manifest.json'
+      'assets/*.{json,js}'
     ])
     .pipe(gulp.dest('dist/'))
 });
@@ -70,16 +75,15 @@ gulp.task('default', ['build'], () => {
 
   gulp.watch('app/styles/*.scss', ['styles']);
   gulp.watch('app/views/**/*.html', ['views']);
-  gulp.watch('assets/**/*.{woff,woff2,txt,jpg,png,gif,svg,md}', ['assets']);
-  gulp.watch('assets/manifest.json', ['manifest']);
+  gulp.watch('assets/**/*.{woff,woff2,txt,jpg,png,gif,svg,md,js}', ['assets']);
+  gulp.watch('assets/*.{json,js}', ['root']);
   gulp.watch([
-    'dist/**/*.html',
-    'dist/manifest.json',
-    'dist/assets/*.{woff,woff2,txt,jpg,png,gif,svg,md}',
+    'dist/**/*.{html,json,js}',
+    'dist/assets/*.{woff,woff2,txt,jpg,png,gif,svg,md,js}',
     'dist/assets/styles/*.css'
   ]).on('change', browserSync.reload);
 });
 
 gulp.task('build', callback => {
-  runSequence('clean', 'assets', 'manifest', 'views', 'styles', callback);
+  runSequence('clean', 'assets', 'root', 'views', 'styles', callback);
 });
