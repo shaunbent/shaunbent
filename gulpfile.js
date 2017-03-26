@@ -11,7 +11,7 @@ const $ = gulpLoadPlugins();
 
 // configs
 const sassOptions = { outputStyle: 'nested' };
-const supportedBrowsers = ['IE 9', 'last 2 versions', '> 1%', 'Safari 7'];
+const supportedBrowsers = ['last 2 versions', '> 1%'];
 const autoprefixerOptions = { browsers: supportedBrowsers };
 const nanoOptions = {
   autoprefixer: { browsers: supportedBrowsers },
