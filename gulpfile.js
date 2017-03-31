@@ -73,7 +73,7 @@ gulp.task('default', ['build'], () => {
     online: true
   });
 
-  gulp.watch('app/styles/*.scss', ['styles']);
+  gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/views/**/*.html', ['views']);
   gulp.watch('assets/**/*.{woff,woff2,txt,jpg,png,gif,svg,md,js}', ['assets']);
   gulp.watch('assets/*.{json,js}', ['root']);

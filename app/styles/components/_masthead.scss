@@ -1,0 +1,76 @@
+/*------------------------------------*\
+    # MASTHEAD
+\*------------------------------------*/
+
+/**
+ * The head of mast aka the big bit at the top of the page.
+ *
+ * 1. We sometimes get some random subpixel stuff with the clip-path
+ *    in Chrome and you can see a little gap, put a border bottom on there
+ *    sort of covers it up.
+ */
+.c-masthead {
+  position: relative;
+  z-index: 0;
+
+  height: 85vh;
+
+  background-image: url('../images/pattern.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &:after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    display: block;
+    height: 140px;
+    border-bottom: 2px solid $c-white; /* [1] */
+
+    background-color: $c-white;
+    content: "";
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+  }
+}
+
+/**
+ * 1. Get the height from the parent
+ */
+.c-masthead__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-right: baseline(8);
+  padding-left: baseline(8);
+
+  height: inherit; /* [1] */
+
+
+}
+
+.c-masthead__title {
+  position: relative;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+
+  &:after {
+    display: block;
+    width: 120px;
+    height: 4px;
+    margin: 8px auto 16px;
+
+    content: '';
+    border-radius: 100px;
+    background-color: $c-white;
+  }
+}
+
+.c-masthead__summary {
+
+}

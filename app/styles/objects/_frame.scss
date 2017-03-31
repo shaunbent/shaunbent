@@ -1,0 +1,35 @@
+/*------------------------------------*\
+    # FRAME
+\*------------------------------------*/
+
+/**
+ * A frame is an encasulated peice of content. The background
+ * bleeds to the edge of the page.
+ */
+.o-frame {
+  background-color: $c-white;
+  color: $c-voodoo;
+}
+
+/**
+ * Ensure the frame is 100% of the viewport height
+ */
+.o-frame--fit {
+  height: 100vh;
+}
+
+/**
+ * Colour variants
+ */
+.o-frame--voodoo {
+  background-color: $c-voodoo;
+  color: $c-white;
+}
+
+.o-frame--snow {
+  background-color: $c-white-snow;
+}
+
+.o-frame__content {
+  padding: baseline(8) 0;
+}
