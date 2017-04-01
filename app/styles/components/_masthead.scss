@@ -13,13 +13,16 @@
   position: relative;
   z-index: 0;
 
-  height: 85vh;
+  height: 65vh;
+  // height: 85vh;
 
+  color: $c-white;
+  background-image: linear-gradient(140deg, #1d2671, $c-friend-rose);
   background-image: url('../images/pattern.svg');
   background-repeat: no-repeat;
   background-size: cover;
 
-  &:after {
+  &::after {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -27,29 +30,34 @@
     z-index: 1;
 
     display: block;
-    height: 140px;
-    border-bottom: 2px solid $c-white; /* [1] */
+    height: 100px;
 
     background-color: $c-white;
-    content: "";
+    content: '';
     clip-path: polygon(100% 0, 0 100%, 100% 100%);
   }
 }
 
+.c-masthead__logo {
+  display: flex;
+  justify-content: center;
+  padding-top: baseline(4);
+}
+
 /**
- * 1. Get the height from the parent
+ * 1. Include the height of the clip & some. TODO: come up with a better
+ *    of handling this
+ * 2. Get the height from the parent
  */
 .c-masthead__content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-right: baseline(8);
-  padding-left: baseline(8);
-
-  height: inherit; /* [1] */
-
-
+  padding-right: baseline(4);
+  padding-bottom: 100px + 80px; /* [1] */
+  padding-left: baseline(4);
+  height: inherit; /* [2] */
 }
 
 .c-masthead__title {
@@ -58,19 +66,35 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 40px;
+  text-align: center;
 
   &:after {
     display: block;
-    width: 120px;
-    height: 4px;
-    margin: 8px auto 16px;
+    width: 75%;
+    height: 1px;
+    margin: 24px auto 32px;
 
     content: '';
-    border-radius: 100px;
-    background-color: $c-white;
+    background-color: $c-london-hue;
   }
 }
 
-.c-masthead__summary {
+.c-masthead__links-item + .c-masthead__links-item {
+  margin-left: baseline(3);
+}
 
+.c-masthead__link {
+  display: block;
+
+  color: $c-white;
+  transition: color .2s cubic-bezier(0.3, 0, 0.7, 1);
+
+  &:hover {
+    color: $c-friend-rose;
+  }
+}
+
+.c-masthead__link-icon {
+  width: 32px;
+  height: 32px;
 }
