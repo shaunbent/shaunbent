@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700|PT+Serif">
 
     <meta name="theme-color" content="#452b45" />
     <link rel="manifest" href="/manifest.json" />
@@ -16,7 +16,10 @@
 <body>
 
 {% include "includes/_masthead.html" %}
-{% include "includes/_header.html" %}
+<main role="main">
+  {% include "includes/_about.html" %}
+  {% include "includes/_clients.html" %}
+</main>
 
 <script>
 if ('serviceWorker' in navigator) {
