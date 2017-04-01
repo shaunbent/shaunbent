@@ -6,8 +6,8 @@
  * The head of mast aka the big bit at the top of the page.
  *
  * 1. We sometimes get some random subpixel stuff with the clip-path
- *    in Chrome and you can see a little gap, put a border bottom on there
- *    sort of covers it up.
+ *    in Chrome and you can see a little gap. We're hiding this by
+ *    oversizing the mask and pulling it down a little
  */
 .c-masthead {
   position: relative;
@@ -24,9 +24,9 @@
 
   &::after {
     position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    right: -10px; /* [1] */
+    bottom: -1px; /* [1] */
+    left: -10px; /* [1] */
     z-index: 1;
 
     display: block;
