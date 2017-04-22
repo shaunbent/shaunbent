@@ -64,6 +64,21 @@ gulp.task('views', () =>
     .pipe(gulp.dest('dist'))
 );
 
+gulp.task('inline', () =>
+  gulp
+    .src([
+      'dist/*.html'
+    ])
+    .pipe(
+      $.inline({
+        base: 'dist/',
+        disabledTypes: ['svg', 'img', 'js'],
+        ignore: ['https://fonts.googleapis.com/css']
+      })
+    )
+    .pipe(gulp.dest('dist'))
+);
+
 gulp.task('clean', () => del(['dist'], { dot: true }) );
 
 gulp.task('default', ['build'], () => {
@@ -85,5 +100,5 @@ gulp.task('default', ['build'], () => {
 });
 
 gulp.task('build', callback => {
-  runSequence('clean', 'assets', 'root', 'views', 'styles', callback);
+  runSequence('clean', 'assets', 'root', 'styles', 'views', 'inline', callback);
 });
