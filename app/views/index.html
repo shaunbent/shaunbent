@@ -1,1 +1,32 @@
-{% extends "includes/_base.html" %}
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Shaun Bent</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700|PT+Serif">
+
+    <meta name="theme-color" content="#452b45" />
+    <link rel="manifest" href="/manifest.json" />
+</head>
+<body>
+
+{% include "includes/_masthead.html" %}
+<main role="main">
+  {% include "includes/_about.html" %}
+  {% include "includes/_clients.html" %}
+</main>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js');
+  });
+}
+</script>
+</body>
+</html>
