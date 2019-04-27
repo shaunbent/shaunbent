@@ -2,3 +2,5 @@ www.shaunbent.co.uk*
 node_modules
 dist
 yarn.lock
+.cache
+public
