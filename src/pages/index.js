@@ -1,9 +1,10 @@
 import React from 'react';
+import Layout from '../components/Layout';
 import SEO from '../components/seo';
 
 function BlogIndex(props) {
   return (
-    <React.Fragment>
+    <Layout>
       <SEO title="Shaun Bent" />
       <header>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
@@ -18,7 +19,7 @@ function BlogIndex(props) {
         aliquid, libero qui quibusdam iusto?
       </main>
       <footer>Copyright &copy; 2019-2020</footer>
-    </React.Fragment>
+    </Layout>
   );
 }
 
