@@ -1,26 +1,48 @@
 import React from 'react';
 import Layout from '../components/Layout';
+import Masthead from '../components/Masthead';
+import Frame from '../components/Frame';
 import SEO from '../components/seo';
+import TwitterIcon from '../images/twitter.inline.svg';
+import InstagramIcon from '../images/instagram.inline.svg';
+import GithubIcon from '../images/github.inline.svg';
 
-function BlogIndex(props) {
+const socialLinks = [
+  {
+    icon: <TwitterIcon />,
+    url: 'https://www.twitter.com/shaunbent',
+    text: 'I say things on Twitter',
+  },
+  {
+    icon: <InstagramIcon />,
+    url: 'https://www.instagram.com/shaunbent',
+    text: 'I write code on GitHub',
+  },
+  {
+    icon: <GithubIcon />,
+    url: 'https://www.github.com/shaunbent',
+    text: 'A take pictures of things on Instagram',
+  },
+];
+
+function Index() {
   return (
     <Layout>
       <SEO title="Shaun Bent" />
-      <header>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
-        adipisci? Nesciunt id, ipsam rerum minus vero velit qui maiores,
-        pariatur nulla assumenda fuga quis. Dolorum ea quidem quam
-        maiores sequi!
-      </header>
+      <Masthead social={socialLinks} />
       <main>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem
-        adipisci veniam dignissimos. Eos minima quos accusamus nobis
-        architecto quasi laboriosam modi, impedit doloremque sit ducimus
-        aliquid, libero qui quibusdam iusto?
+        <Frame>
+          <h2>About</h2>
+          <p>Hej, I'm Shaun Bent and I work with Design Systems.</p>
+        </Frame>
+        <Frame color="snow">
+          <h2>Work</h2>
+          <p>Insert Companies</p>
+        </Frame>
       </main>
       <footer>Copyright &copy; 2019-2020</footer>
     </Layout>
   );
 }
 
-export default BlogIndex;
+export default Index;
