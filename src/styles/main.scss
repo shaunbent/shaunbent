@@ -22,16 +22,18 @@
 @import 'elements/images';
 
 // @import 'objects/bullet';
-// @import 'objects/icon';
+@import 'objects/frame';
+@import 'objects/icon';
 // @import 'objects/layout';
 // @import 'objects/layout-flex';
 // @import 'objects/list-bare';
-// @import 'objects/list-inline';
+@import 'objects/list-inline';
 // @import 'objects/media';
 // @import 'objects/ratio';
-@import 'objects/wrapper';
+@import 'objects/wrap';
 
 @import 'components/page';
+@import 'components/masthead';
 
 @import 'utilities/clearfix';
 // @import 'utilities/widths';
