@@ -32,8 +32,10 @@ $base-spacing-unit: 8px;
 // Between these global breakpoints you can also add component breakpoints where the content needs it.
 
 $mq-breakpoints: (
-  mobile:  320px,
-  tablet:  740px,
-  desktop: 980px,
-  wide:    1300px
+  bp-s: 400px,
+  bp-m: 500px,
+  bp-mx: 700px,
+  bp-l: 900px,
+  bp-xl: 1008px,
+  bp-xxl: 1280px
 );

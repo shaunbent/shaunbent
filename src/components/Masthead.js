@@ -17,7 +17,7 @@ function SocialLink({ text, icon, url }) {
 function Masthead({ social }) {
   return (
     <header className="c-masthead">
-      <div className="o-wrap">
+      <div className="c-masthead__wrap [ o-wrap ]">
         <div className="c-masthead__top">
           <div className="c-masthead__logo">
             <Logo width="64" height="64" />
