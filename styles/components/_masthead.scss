@@ -1,0 +1,97 @@
+@use '../tools';
+
+/*------------------------------------*\
+    # MASTHEAD
+\*------------------------------------*/
+
+/**
+ * 1. Stick the masthead in place when the scroll point passes out page body
+ */
+.c-masthead {
+  padding-block-end: var(--s-4);
+  border-block-end: 1px solid var(--c-decorative);
+  margin-block-end: var(--s-4);
+
+  @include tools.mq($from: sm, $until: md) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-4);
+  }
+
+  @include tools.mq($from: md) {
+    position: sticky; /* [1] */
+    top: var(--s-8); /* [1] */
+    padding-block-end: 0;
+    border-block-end: none;
+    margin-block-end: 0;
+  }
+}
+
+.c-masthead__image {
+  width: 180px;
+  height: 180px;
+
+  aspect-ratio: 1 / 1;
+
+  background-color: var(--c-decorative);
+  border-radius: 400px;
+  overflow: hidden;
+
+  @include tools.mq($from: sm, $until: md) {
+    flex: 0 0 auto;
+  }
+}
+
+.c-masthead__bio {
+  @include tools.mq($from: sm, $until: md) {
+    flex: 1 1 100%;
+    flex-basis: min-content;
+  }
+
+  @include tools.mq($from: md) {
+    margin-block-start: var(--s-2);
+  }
+}
+
+.c-masthead__bio-title {
+  margin-block: 0;
+
+  a {
+    font-size: var(--h3);
+    font-weight: bold;
+
+    text-decoration: none;
+    color: var(--c-text);
+
+    &:active,
+    &:hover {
+      color: var(--c-text-pressed);
+    }
+  }
+}
+
+/**
+ * 1. Remove any top margin from the first child
+ */
+.c-masthead__bio-blurb {
+  font-size: var(--h6);
+
+  > :first-child {
+    margin-block-start: 0; /* [1] */
+  }
+}
+
+.c-masthead__bio-socials {
+  @include tools.mq($from: sm, $until: md) {
+    flex-basis: 100%;
+  }
+}
+
+.c-masthead__theme-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: red;
+  width: 30px;
+  height: 30px;
+}

@@ -1,64 +1,19 @@
 {
-  "name": "shaunbent",
-  "private": true,
-  "description": "Personal site of Shaun Bent",
-  "version": "0.1.0",
-  "author": "Shaun Bent <shaunbent@me.com",
-  "bugs": {
-    "url": "https://github.com/shaunbent/shaunbent/issues"
+  "name": "next",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./styles/main.scss:./css/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.77.4"
   },
   "dependencies": {
-    "@mdx-js/mdx": "^1.0.10",
-    "@mdx-js/react": "^1.0.6",
-    "@mdx-js/tag": "^0.20.3",
-    "classnames": "^2.2.6",
-    "gatsby": "^2.3.25",
-    "gatsby-image": "^2.0.39",
-    "gatsby-mdx": "^0.6.2",
-    "gatsby-paginate": "^1.0.17",
-    "gatsby-plugin-feed": "^2.1.1",
-    "gatsby-plugin-google-analytics": "^2.0.18",
-    "gatsby-plugin-manifest": "^2.0.29",
-    "gatsby-plugin-offline": "^2.0.25",
-    "gatsby-plugin-react-helmet": "^3.0.12",
-    "gatsby-plugin-react-svg": "2.1.1",
-    "gatsby-plugin-sass": "^2.0.11",
-    "gatsby-plugin-sharp": "^2.0.35",
-    "gatsby-plugin-sitemap": "^2.0.12",
-    "gatsby-remark-copy-linked-files": "^2.0.11",
-    "gatsby-remark-images": "^3.0.10",
-    "gatsby-remark-smartypants": "^2.0.9",
-    "gatsby-source-filesystem": "^2.0.29",
-    "gatsby-transformer-remark": "^2.3.8",
-    "gatsby-transformer-sharp": "^2.1.18",
-    "node-sass": "4.12.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.0",
-    "sass-mq": "^5.0.0"
-  },
-  "devDependencies": {
-    "autoprefixer": "^9.5.1",
-    "cssnano": "^4.1.10",
-    "prettier": "^1.17.0",
-    "react-testing-library": "^6.1.2"
-  },
-  "homepage": "https://github.com/shaunbent/shaunbent#readme",
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shaunbent/shaunbent.git"
-  },
-  "scripts": {
-    "image-resize": "sips --resampleWidth 600 src/posts/**/*.jpg && sips --resampleWidth 600 src/posts/**/*.png",
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --single-quote --tab-width=4 --print-width=80 \"./src/**/*.js\" \"./test/**/*js\" \"./gatsby-*.js\" --write",
-    "start": "yarn develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "sass-mq": "6.0.0"
   }
 }

@@ -1,0 +1,18 @@
+///*------------------------------------*\
+//    # SPACING
+//\*------------------------------------*/
+
+// Global spacing
+//
+// @type Number (with units)
+
+$base-spacing-unit: 8px;
+$scale: 10;
+
+:root {
+  --s--1: calc(#{$base-spacing-unit} / 2);
+  --s-0: 0;
+  @for $i from 1 through $scale {
+    --s-#{$i}: calc(#{$base-spacing-unit} * #{$i});
+  }
+}

@@ -1,0 +1,6 @@
+@use '../global/config';
+@use '../../node_modules/sass-mq/mq' as * with (
+    $breakpoints: config.$breakpoints
+);
+
+@forward '../../node_modules/sass-mq/mq';

@@ -1,0 +1,36 @@
+///*------------------------------------*\
+//    # COLOR
+//\*------------------------------------*/
+
+:root {
+  --c-white: #ffffff;
+  --c-seasalt: #f8f9fa;
+  --c-antiflash-white: #e9ecef;
+  --c-platinum: #dee2e6;
+  --c-french-gray: #ced4da;
+  --c-french-gray-2: #adb5bd;
+  --c-slate-gray: #6c757d;
+  --c-outer-space: #495057;
+  --c-onyx: #343a40;
+  --c-eerie-black: #212529;
+  --c-stockholm-black: #121212;
+  --c-black: #000000;
+
+  [data-theme="light"] {
+    --c-bg: var(--c-white);
+    --c-text: var(--c-onyx);
+    --c-text-highlight: var(--c-eerie-black);
+    --c-text-pressed: var(--c-stockholm-black);
+    --c-text-subdued: var(--c-outer-space);
+    --c-decorative: var(--c-french-gray);
+  }
+
+  [data-theme="dark"] {
+    --c-bg: var(--c-stockholm-black);
+    --c-text: var(--c-platinum);
+    --c-text-highlight: var(--c-antiflash-white);
+    --c-text-pressed: var(--c-seasalt);
+    --c-text-subdued: var(--c-french-gray);
+    --c-decorative: var(--c-french-gray-2);
+  }
+}

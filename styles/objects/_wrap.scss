@@ -1,0 +1,15 @@
+/*------------------------------------*\
+    # WRAP
+\*------------------------------------*/
+
+/**
+ * A generic wrapper class to keep the content contained and consistent
+ *
+ * 1. Inherit any height from the parent element, useful for 100vh stuff
+ */
+.o-wrap {
+  max-width: 1024px;
+  height: inherit; /* [1] */
+  margin: 0 auto;
+  padding-inline: var(--s-3);
+}
