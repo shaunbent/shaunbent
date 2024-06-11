@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    # HEADINGS
+\*------------------------------------*/
+
+$text-elements: h1, h2, h3, h4, h5, h6, small;
+
+@each $element in $text-elements {
+  #{$element} {
+    font-size: var(--#{$element});
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--c-text-highlight);
+  line-height: var(--heading-line-height);
+  margin-block-start: 2.25rem;
+  margin-block-end: 1rem;
+  font-weight: bold;
+}
+
+p {
+  margin-block: 1rem;
+}
+
+a {
+  color: var(--c-text-highlight);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: var(--c-decorative);
+  text-underline-offset: var(--s--1);
+
+  &:active,
+  &:hover {
+    text-decoration-color: var(--c-text-highlight);
+  }
+}

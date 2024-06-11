@@ -1,0 +1,22 @@
+@use '../tools';
+
+/*------------------------------------*\
+    # VISIBILITY
+\*------------------------------------*/
+
+/**
+ * Hide only visually, but have it available for screen readers
+ */
+
+ .u-hidden-visually {
+  @include tools.hidden-visually();
+}
+
+
+/**
+ * Hide visually and from screen readers.
+ */
+
+.u-hidden {
+  display: none !important;
+}

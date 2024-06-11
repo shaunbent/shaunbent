@@ -1,0 +1,5 @@
+@use '../tools';
+@use 'spacing';
+@use 'color';
+
+@include tools.type-scale();

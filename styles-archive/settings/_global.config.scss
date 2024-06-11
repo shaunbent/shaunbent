@@ -1,0 +1,39 @@
+///*------------------------------------*\
+//    # GLOBAL CONFIGURATION
+//\*------------------------------------*/
+
+// The global configuration defines a series of variables
+// which effect the entire project.
+//
+// Changing any of these variables is likely to effect the
+// entire project. Tread carefully!! You've been warned.
+
+
+// Global typography styles
+//
+// @type Number (with units)
+
+$global-font-size: 16px;
+$global-line-height: 24px;
+
+
+// Global spacing
+//
+// @type Number (with units)
+
+$base-spacing-unit: 8px;
+
+
+/// Breakpoints
+//
+// Our global breakpoints allow us to make major changes in the grid and use typography
+// consistently across our products.
+//
+// Between these global breakpoints you can also add component breakpoints where the content needs it.
+
+$mq-breakpoints: (
+  mobile:  320px,
+  tablet:  740px,
+  desktop: 980px,
+  wide:    1300px
+);

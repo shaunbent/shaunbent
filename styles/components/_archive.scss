@@ -1,0 +1,55 @@
+@use '../tools';
+
+/*------------------------------------*\
+    # ARCHIVE
+\*------------------------------------*/
+
+.c-archive {
+
+}
+
+.c-archive__title {
+  font-size: var(--h3);
+  margin-block-start: 0;
+}
+
+.c-archive__group-title {
+  font-size: var(--h4);
+}
+
+.c-archive__item {
+  & + & {
+    margin-block-start: var(--s-1);
+  }
+}
+
+.c-archive__item-details {
+  @include tools.mq($from: sm) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.c-archive__item-title {
+  font-size: var(--h6);
+}
+
+.c-archive__item-date {
+  margin-block: 0;
+  color: var(--c-text-subdued);
+
+  @include tools.mq($from: sm) {
+    align-content: center;
+    flex-basis: 130px;
+    flex-shrink: 0;
+    text-align: right;
+  }
+}
+
+.c-archive__item-blurb {
+  margin-block-start: var(--s-1);
+
+  > :first-child {
+    margin-block-start: 0;
+  }
+}

@@ -1,0 +1,27 @@
+@use '../global/config';
+@use 'sass:math';
+
+///*------------------------------------*\
+//    # TYPE SCALE
+//\*------------------------------------*/
+
+// Mixin to generate a type scale based on a given scale
+// Returns CSS variables for the given scale
+// Defaults to the major third scale
+//
+// @link - https://gist.github.com/TylerAPfledderer/e751068152b3600049b1c494dfc5b79c
+//
+// @include type-scale($scale);
+//
+@mixin type-scale($scale: 1.25) {
+  :root {
+      --base-font-size: #{config.$base-font-size};
+      --base-line-height: #{config.$base-line-height};
+      --heading-line-height: 1.15;
+
+      @for $i from 1 through 6 {
+          --h#{$i}:  #{math.pow($scale, (7 - $i)) * 1rem};
+      }
+      --small: #{math.pow($scale, -1) * 1rem};
+  }
+}

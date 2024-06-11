@@ -1,0 +1,34 @@
+@use '../global/config';
+
+/*------------------------------------*\
+    # PAGE
+\*------------------------------------*/
+
+:root {
+  --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/**
+ * Simple page-level setup.
+ *
+ * 1. Calculate the root font-size in rem
+ * 2. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
+ *    navigating between pages that do/do not have enough content to produce
+ *    scrollbars naturally.
+ * 3. Ensure the page always fills at least the entire height of the viewport.
+ */
+
+html {
+  font-family: var(--system-ui);
+  font-size: (config.$base-font-size / 16) + rem; /* [1] */
+  line-height: config.$base-line-height;
+  font-weight: 400;
+  overflow-y: scroll; /* [1] */
+  min-height: 100%; /* [2] */
+
+}
+
+body {
+  color: var(--c-text);
+  background-color: var(--c-bg);
+}

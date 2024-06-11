@@ -1,0 +1,40 @@
+@use '../tools';
+
+/*------------------------------------*\
+    # PAGE
+\*------------------------------------*/
+
+.c-page {
+  padding: var(--s-6);
+
+  @include tools.mq($from: sm) {
+    padding: var(--s-8);
+  }
+}
+
+.c-page__columns {
+  @include tools.mq($from: md) {
+    display: flex;
+  }
+}
+
+.c-page__primary {
+  @include tools.mq($from: md) {
+    flex: 1 1 100%;
+  }
+}
+
+.c-page__secondary {
+  @include tools.mq($from: md) {
+    min-width: 350px;
+    max-width: 650px;
+    flex: 1 1 100%;
+    padding-right: var(--s-10);
+  }
+}
+
+.c-page__footer {
+  margin-block-start: var(--s-4);
+  border-block-start: 1px solid var(--c-decorative);
+  padding-block-start: var(--s-1);
+}
