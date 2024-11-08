@@ -1,0 +1,16 @@
+<h1>Deploy with GitHub pages</h1>
+<p>Use the following steps to deploy the generated archive to <a href="https://pages.github.com/">GitHub pages</a>:</p>
+<ol start="0">
+<li>Create a <a href="https://github.com/new">new empty GitHub repository</a></li>
+<li>After creation, navigate to the Settings tab of your new GitHub repository</li>
+<li>Navigate to the &quot;Pages&quot; page</li>
+<li>Enable GitHub pages by selecting your <code>main</code> branch</li>
+<li>Follow the <a href="https://github.com/tweetback/tweetback#build-the-web-site">instructions to Build the web site</a>. Note: unless you use a custom domain, you will need to pass your repo's name as your <code>--pathprefix</code> option.</li>
+<li>Using a terminal, navigate into the <code>_site</code> folder</li>
+<li>Run <code>git init</code></li>
+<li>Add the new repository as the origin: <code>git remote add origin git@github.com:USERNAME/REPO.git</code></li>
+<li>Add and commit all generates files in that folder to the new git repository with <code>git commit -am &quot;Add Twitter archive&quot;</code></li>
+<li>Push your commit: <code>git branch -M main</code> and <code>git push -u origin main</code></li>
+<li>Your web site will now be serving at the URL <code>https://USERNAME.github.io/REPO/</code></li>
+<li>Optionally, <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">use a custom domain</a></li>
+</ol>
