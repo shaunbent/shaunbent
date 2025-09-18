@@ -12,9 +12,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "sass": "^1.77.4"
+    "sass": "^1.92.1"
   },
   "dependencies": {
-    "sass-mq": "7.0.0"
+    "sass-mq": "^7.0.0"
   }
 }
