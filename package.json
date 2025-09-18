@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "sass --watch styles/main.scss:css/style.css",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "sass --style=compressed styles/main.scss:css/style.css",
-    "dev": "sass --watch styles/main.scss:css/style.css"
+    "build": "sass --style=compressed styles/main.scss:css/style.css"
   },
   "keywords": [],
   "author": "",
