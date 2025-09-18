@@ -15,6 +15,7 @@
     "sass": "^1.77.4"
   },
   "dependencies": {
+    "pnpm": "10.17.0",
     "sass-mq": "6.0.0"
   }
 }
