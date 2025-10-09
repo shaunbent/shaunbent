@@ -46,6 +46,9 @@ jobs:
         run: pnpm install
 
       - name: Build production bundle
+        env:
+          DISCOGS_TOKEN: ${{ secrets.DISCOGS_TOKEN }}
+          DISCOGS_USERNAME: shaunbent
         run: pnpm build
 
       - name: Setup Pages
