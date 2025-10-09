@@ -32,11 +32,12 @@ Builds Eleventy templates and compiles/minifies Sass to CSS. Output goes to `_si
 The site uses Eleventy 3.x as the static site generator:
 
 **Directory Structure:**
-- `src/` - Source files for Eleventy templates
+- `src/` - All source files
   - `_layouts/` - Page layouts (Nunjucks templates)
     - `base.njk` - Base HTML layout with `<head>` and wrapper
   - `_includes/` - Reusable template partials
   - `_data/` - Global data files (JavaScript or JSON)
+  - `styles/` - SCSS source files (ITCSS architecture)
   - `*.njk` - Page templates (e.g., `index.njk`)
 - `_site/` - Build output directory (git-ignored)
 
@@ -46,7 +47,7 @@ The site uses Eleventy 3.x as the static site generator:
 - Passthrough copy for static assets (images, CSS, CNAME, etc.)
 
 **Build Process:**
-1. Sass compiles `styles/main.scss` → `_site/css/style.css`
+1. Sass compiles `src/styles/main.scss` → `_site/css/style.css`
 2. Eleventy processes templates from `src/` → `_site/`
 3. Static assets are copied to `_site/`
 
@@ -54,21 +55,21 @@ The site uses Eleventy 3.x as the static site generator:
 
 The project follows the Inverted Triangle CSS (ITCSS) architecture, organizing styles by specificity:
 
-1. **Global** (`styles/global/`) - Configuration, variables, breakpoints, colors
+1. **Global** (`src/styles/global/`) - Configuration, variables, breakpoints, colors
    - `_config.scss`: Global configuration (font size, line height, breakpoints)
    - `_color.scss`: Color system with CSS custom properties and theme support (light/dark)
    - `_spacing.scss`: Spacing scale
    - `_variables.scss`: Centralized imports
 
-2. **Generic** (`styles/generic/`) - Reset, normalize, box-sizing
+2. **Generic** (`src/styles/generic/`) - Reset, normalize, box-sizing
 
-3. **Elements** (`styles/elements/`) - Base HTML element styles (typography, images, root)
+3. **Elements** (`src/styles/elements/`) - Base HTML element styles (typography, images, root)
 
-4. **Objects** (`styles/objects/`) - Layout patterns (wrap, list-bare, list-inline)
+4. **Objects** (`src/styles/objects/`) - Layout patterns (wrap, list-bare, list-inline)
 
-5. **Components** (`styles/components/`) - UI components (page, masthead, social-links, archive)
+5. **Components** (`src/styles/components/`) - UI components (page, masthead, social-links, archive)
 
-6. **Utilities** (`styles/utilities/`) - Single-purpose helpers (clearfix, visibility)
+6. **Utilities** (`src/styles/utilities/`) - Single-purpose helpers (clearfix, visibility)
 
 ### Key Technical Patterns
 

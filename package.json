@@ -6,10 +6,10 @@
   "main": "index.js",
   "scripts": {
     "start": "npm-run-all --parallel start:*",
-    "start:sass": "sass --watch styles/main.scss:_site/css/style.css",
+    "start:sass": "sass --watch src/styles/main.scss:_site/css/style.css",
     "start:eleventy": "eleventy --serve",
     "build": "npm-run-all build:*",
-    "build:sass": "sass --style=compressed styles/main.scss:_site/css/style.css",
+    "build:sass": "sass --style=compressed src/styles/main.scss:_site/css/style.css",
     "build:eleventy": "eleventy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
