@@ -1,7 +1,6 @@
 export default function(eleventyConfig) {
   // Copy static assets to output directory
-  eleventyConfig.addPassthroughCopy("css");
-  eleventyConfig.addPassthroughCopy("images");
+  eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("*.png");
   eleventyConfig.addPassthroughCopy("*.svg");
   eleventyConfig.addPassthroughCopy("*.ico");
