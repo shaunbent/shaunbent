@@ -2,16 +2,23 @@
   "name": "next",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "sass --watch styles/main.scss:css/style.css",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "sass --style=compressed styles/main.scss:css/style.css"
+    "start": "npm-run-all --parallel start:*",
+    "start:sass": "sass --watch src/styles/main.scss:_site/css/style.css",
+    "start:eleventy": "eleventy --serve",
+    "build": "npm-run-all build:*",
+    "build:sass": "sass --style=compressed src/styles/main.scss:_site/css/style.css",
+    "build:eleventy": "eleventy",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@11ty/eleventy": "3.1.2",
+    "npm-run-all": "4.1.5",
     "sass": "^1.92.1"
   },
   "dependencies": {

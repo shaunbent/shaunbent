@@ -4,4 +4,4 @@ dist
 yarn.lock
 .cache
 public
-css/*
+_site

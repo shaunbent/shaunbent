@@ -1,0 +1,11 @@
+<div class="c-archive__item">
+  <div class="c-archive__item-details">
+    <a class="c-archive__item-title" href="{{ item.url }}">{{ item.title }}</a>
+    <p class="c-archive__item-date"><time>{{ item.date }}</time></p>
+  </div>
+  {% if item.description %}
+  <div class="c-archive__item-blurb">
+    <p>{{ item.description }}</p>
+  </div>
+  {% endif %}
+</div>
