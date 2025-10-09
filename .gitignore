@@ -5,3 +5,4 @@ yarn.lock
 .cache
 public
 _site
+.env

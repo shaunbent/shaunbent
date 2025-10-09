@@ -1,0 +1,61 @@
+---
+layout: base.njk
+title: Vinyl Collection | Shaun Bent
+description: My personal vinyl collection - {{ vinyl.length }} records and counting
+---
+<div class="c-page">
+  <div class="c-page__columns">
+    <div class="c-page__secondary">
+      <header class="c-masthead">
+        <div class="c-masthead__image">
+          <img src="/images/shaun-bent.jpeg" alt="Headshot of Shaun Bent" />
+        </div>
+        <div class="c-masthead__bio">
+          <p class="c-masthead__bio-title">
+            <a href="/">Shaun Bent</a>
+          </p>
+          <div class="c-masthead__bio-blurb">
+            <p>Engineering manager, design system leader and accessibility advocate from the UK.</p>
+          </div>
+        </div>
+        <div class="c-masthead__bio-socials c-social-links">
+          <h3 class="c-social-links__title">Navigation</h3>
+          <ul class="c-social-links__list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/vinyl/" aria-current="page">Vinyl Collection</a></li>
+          </ul>
+        </div>
+      </header>
+    </div>
+    <div class="c-page__primary">
+      <main class="c-page__body">
+        <div class="c-vinyl">
+          <h1 class="c-vinyl__title">My Vinyl Collection</h1>
+          <p class="c-vinyl__count">{{ vinyl.length }} records</p>
+
+          <div class="c-vinyl__grid">
+            {% for record in vinyl %}
+            <article class="c-vinyl__item">
+              <a href="{{ record.discogsUrl }}" target="_blank" rel="noopener noreferrer" class="c-vinyl__link">
+                <div class="c-vinyl__cover">
+                  <img src="{{ record.coverImage }}" alt="Album cover for {{ record.title }}" loading="lazy" />
+                </div>
+                <div class="c-vinyl__info">
+                  <h2 class="c-vinyl__artist">{{ record.artist }}</h2>
+                  <p class="c-vinyl__album">{{ record.title }}</p>
+                  {% if record.year %}
+                  <p class="c-vinyl__year">{{ record.year }}</p>
+                  {% endif %}
+                </div>
+              </a>
+            </article>
+            {% endfor %}
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <footer class="c-page__footer">
+    🖤 Made with love and hosted on <a href="https://github.com/shaunbent/shaunbent">GitHub Pages</a>.
+  </footer>
+</div>

@@ -1,3 +1,5 @@
+import 'dotenv/config';
+
 export default function(eleventyConfig) {
   // Copy static assets to output directory
   eleventyConfig.addPassthroughCopy("src/images");
