@@ -7,6 +7,19 @@ export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("*.webmanifest");
   eleventyConfig.addPassthroughCopy("CNAME");
 
+  // Add custom groupBy filter
+  eleventyConfig.addFilter("groupby", (array, key) => {
+    const groups = {};
+    array.forEach(item => {
+      const groupKey = item[key];
+      if (!groups[groupKey]) {
+        groups[groupKey] = [];
+      }
+      groups[groupKey].push(item);
+    });
+    return Object.entries(groups);
+  });
+
   return {
     dir: {
       input: "src",

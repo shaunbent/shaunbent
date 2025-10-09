@@ -31,75 +31,25 @@ layout: base.njk
       <main class="c-page__body">
         <div class="c-archive">
           <h2 class="c-archive__title">Posts</h2>
+          {% for year, items in posts | groupby("year") | reverse %}
           <div class="c-archive__group">
-            <h3 class="c-archive__group-title">2022</h3>
-            <div class="c-archive__item">
-              <div class="c-archive__item-details">
-                <a class="c-archive__item-title" href="https://spotify.design/article/can-i-get-an-encore-spotifys-design-system-three-years-on">Can I get an Encore? Spotify's Design System, Three Years On</a>
-                <p class="c-archive__item-date"><time>December, 2022</time></p>
-              </div>
-              <div class="c-archive__item-blurb">
-                <p>What has Encore been up to? How has Encore grown and evolved in the last few years? And what have we learned?</p>
-              </div>
-            </div>
+            <h3 class="c-archive__group-title">{{ year }}</h3>
+            {% for item in items %}
+            {% include "archive-item.njk" %}
+            {% endfor %}
           </div>
-          <div class="c-archive__group">
-            <h3 class="c-archive__group-title">2020</h3>
-            <div class="c-archive__item">
-              <div class="c-archive__item-details">
-                <a class="c-archive__item-title" href="https://spotify.design/article/reimagining-design-systems-at-spotify">Reimagining Design Systems at Spotify</a>
-                <p class="c-archive__item-date"><time>September, 2020</time></p>
-              </div>
-              <div class="c-archive__item-blurb">
-                <p>In November 2019 we introduced Encore, Spotify's new approach to design systems. What motivated us to create Encore, how it's structured? and how it's different from what we've tried before.</p>
-              </div>
-            </div>
-          </div>
-          <div class="c-archive__group">
-            <h3 class="c-archive__group-title">2017</h3>
-            <div class="c-archive__item">
-              <div class="c-archive__item-details">
-                <a class="c-archive__item-title" href="https://medium.com/@shaunbent/css-sucks-9a4471ede74b">CSS Sucks</a>
-                <p class="c-archive__item-date"><time>April, 2017</time></p>
-              </div>
-            </div>
-          </div>
-          <div class="c-archive__group">
-            <h3 class="c-archive__group-title">2016</h3>
-            <div class="c-archive__item">
-              <div class="c-archive__item-details">
-                <a class="c-archive__item-title" href="https://medium.com/bbc-product-technology/css-at-bbc-sport-part-1-bab546184e66">CSS at BBC Sport (Part 1)</a>
-                <p class="c-archive__item-date"><time>May, 2016</time></p>
-              </div>
-            </div>
-          </div>
+          {% endfor %}
         </div>
         <div class="o-item-list">
           <h3>Talks</h3>
+          {% for year, items in talks | groupby("year") | reverse %}
           <div class="c-archive__group">
-            <h3 class="c-archive__group-title">2023</h3>
-            <div class="c-archive__item">
-              <div class="c-archive__item-details">
-                <a class="c-archive__item-title" href="https://youtu.be/xT9uFecrH20?si=T9CaVIULPz2vglI_&t=2213">Building cross-platform Design Systems - Into Design Systems Meetup - Stockholm</a>
-                <p class="c-archive__item-date"><time>November, 2023</time></p>
-              </div>
-              <div class="c-archive__item-blurb">
-                <p>Speaking at the Into Design Systems, Stockholm meetup, I talk about how Spotify is approaching building a cross-platform Design System.</p>
-              </div>
-            </div>
+            <h3 class="c-archive__group-title">{{ year }}</h3>
+            {% for item in items %}
+            {% include "archive-item.njk" %}
+            {% endfor %}
           </div>
-          <div class="c-archive__group">
-            <h3 class="c-archive__group-title">2019</h3>
-            <div class="c-archive__item">
-              <div class="c-archive__item-details">
-                <a class="c-archive__item-title" href="https://www.youtube.com/watch?v=Xww-x7DgiDw">Reimagining Design Systems at Spotify - Design Systems London</a>
-                <p class="c-archive__item-date"><time>Novemeber, 2019</time></p>
-              </div>
-              <div class="c-archive__item-blurb">
-                <p>Speaking at Design Systems London, 2019, I talk about how to you build a design system which supports a fast-paced, autonomous squad culture and works on more than 45 different platforms.</p>
-              </div>
-            </div>
-          </div>
+          {% endfor %}
 
         </div>
       </main>

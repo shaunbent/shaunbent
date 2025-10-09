@@ -1,0 +1,16 @@
+export default [
+  {
+    year: 2023,
+    title: "Building cross-platform Design Systems - Into Design Systems Meetup - Stockholm",
+    url: "https://youtu.be/xT9uFecrH20?si=T9CaVIULPz2vglI_&t=2213",
+    date: "November, 2023",
+    description: "Speaking at the Into Design Systems, Stockholm meetup, I talk about how Spotify is approaching building a cross-platform Design System."
+  },
+  {
+    year: 2019,
+    title: "Reimagining Design Systems at Spotify - Design Systems London",
+    url: "https://www.youtube.com/watch?v=Xww-x7DgiDw",
+    date: "Novemeber, 2019",
+    description: "Speaking at Design Systems London, 2019, I talk about how to you build a design system which supports a fast-paced, autonomous squad culture and works on more than 45 different platforms."
+  }
+];
