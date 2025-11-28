@@ -1,0 +1,278 @@
+@use '../tools/mq';
+
+/*------------------------------------*\
+    # ARTICLE
+\*------------------------------------*/
+
+/**
+ * Article component for blog posts with Medium-inspired typography
+ * and breakout image support.
+ *
+ * Features:
+ * - Optimized reading width (~680px)
+ * - Larger body text for comfortable reading
+ * - CSS Grid-based breakout for images and code blocks
+ * - margin-block-start only spacing philosophy
+ */
+
+.c-article {
+  max-width: 1400px;
+  margin-inline: auto;
+  padding-inline: var(--s-2);
+  padding-block: var(--s-6);
+
+  @include mq.mq($from: md) {
+    padding-block: var(--s-8);
+  }
+}
+
+/*------------------------------------*\
+    # ARTICLE HEADER
+\*------------------------------------*/
+
+.c-article__header {
+  max-width: 680px;
+  margin-inline: auto;
+  margin-block-start: 0;
+  text-align: center;
+}
+
+.c-article__title {
+  font-size: var(--h1);
+  color: var(--c-text-highlight);
+  line-height: 1.2;
+  margin-block-start: 0;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+
+  @include mq.mq($from: md) {
+    font-size: calc(var(--h1) * 1.2);
+  }
+}
+
+.c-article__subtitle {
+  font-size: var(--h4);
+  color: var(--c-text);
+  opacity: 0.7;
+  line-height: 1.5;
+  margin-block-start: var(--s-2);
+  font-weight: 400;
+}
+
+.c-article__meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-2);
+  font-size: var(--small);
+  color: var(--c-text);
+  opacity: 0.6;
+  margin-block-start: var(--s-3);
+}
+
+.c-article__date {
+  font-style: normal;
+}
+
+.c-article__reading-time {
+  &::before {
+    content: '•';
+    margin-inline-end: var(--s-2);
+  }
+}
+
+/*------------------------------------*\
+    # ARTICLE CONTENT
+\*------------------------------------*/
+
+/**
+ * CSS Grid setup for breakout images and code blocks:
+ * - [wide-start] wider than text (default for images/code at desktop)
+ * - [content-start] text column (680px)
+ */
+
+.c-article__content {
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(var(--s-2), 1fr)
+    [wide-start] minmax(0, 120px)
+    [content-start] minmax(0, 680px) [content-end]
+    minmax(0, 120px) [wide-end]
+    minmax(var(--s-2), 1fr) [full-end];
+  margin-block-start: var(--s-6);
+
+  @include mq.mq($until: md) {
+    grid-template-columns:
+      [full-start] var(--s-2)
+      [wide-start content-start] 1fr [content-end wide-end]
+      var(--s-2) [full-end];
+  }
+}
+
+/**
+ * Default: all content sits in the text column
+ */
+.c-article__content > * {
+  grid-column: content;
+}
+
+/**
+ * First child should not have top margin
+ */
+.c-article__content > *:first-child {
+  margin-block-start: 0;
+}
+
+/**
+ * Enhanced typography for article body text
+ * Use --h6 for consistency with other components (e.g., masthead bio)
+ */
+.c-article__content p {
+  font-size: var(--h6);
+  margin-block-start: var(--s-3);
+}
+
+.c-article__content h2 {
+  margin-block-start: var(--s-5);
+}
+
+.c-article__content h3 {
+  margin-block-start: var(--s-4);
+}
+
+.c-article__content h4 {
+  margin-block-start: var(--s-4);
+}
+
+/**
+ * Links in article content
+ * Only override underline offset for larger body text
+ */
+.c-article__content a {
+  text-underline-offset: 0.2em;
+}
+
+/**
+ * Lists
+ * Match paragraph font-size for consistency
+ */
+.c-article__content ul,
+.c-article__content ol {
+  font-size: var(--h6);
+  margin-block-start: var(--s-3);
+  padding-inline-start: var(--s-4);
+}
+
+.c-article__content li {
+  margin-block-start: var(--s-1);
+}
+
+.c-article__content li:first-child {
+  margin-block-start: 0;
+}
+
+/**
+ * Blockquotes
+ */
+.c-article__content blockquote {
+  margin-block-start: var(--s-4);
+  padding-inline-start: var(--s-4);
+  border-inline-start: 4px solid var(--c-decorative);
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.c-article__content blockquote p {
+  margin-block-start: 0;
+}
+
+/**
+ * Code blocks
+ * Breakout to wide column at desktop for better readability
+ */
+.c-article__content pre {
+  grid-column: content;
+  margin-block-start: var(--s-4);
+  padding: var(--s-3);
+  background-color: var(--c-text);
+  color: var(--c-bg);
+  border-radius: 4px;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.6;
+
+  @include mq.mq($from: md) {
+    grid-column: wide;
+  }
+}
+
+.c-article__content code {
+  font-family: 'Monaco', 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+.c-article__content p code {
+  background-color: var(--c-text);
+  color: var(--c-bg);
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+}
+
+/*------------------------------------*\
+    # ARTICLE IMAGES
+\*------------------------------------*/
+
+/**
+ * Figure elements with images
+ * Breakout to wide column at desktop for visual impact
+ */
+.c-article__content figure {
+  grid-column: content;
+  margin-block-start: var(--s-5);
+  margin-inline: 0;
+
+  @include mq.mq($from: md) {
+    grid-column: wide;
+  }
+}
+
+.c-article__content figure img {
+  width: 100%;
+  height: auto;
+  margin-block-start: 0;
+  border-radius: 4px;
+  display: block;
+}
+
+.c-article__content figcaption {
+  font-size: var(--base-font-size);
+  font-style: italic;
+  opacity: 0.7;
+  margin-block-start: var(--s-2);
+}
+
+/*------------------------------------*\
+    # ARTICLE FOOTER
+\*------------------------------------*/
+
+.c-article__footer {
+  max-width: 680px;
+  margin-inline: auto;
+  margin-block-start: var(--s-8);
+  padding-block-start: var(--s-5);
+  border-block-start: 1px solid var(--c-decorative);
+}
+
+.c-article__back-link {
+  color: var(--c-text-highlight);
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-1);
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--c-decorative);
+  }
+}
