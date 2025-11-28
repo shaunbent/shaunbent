@@ -1,4 +1,14 @@
+import markdownItImplicitFigures from 'markdown-it-implicit-figures';
+
 export default function(eleventyConfig) {
+  // Configure markdown-it with implicit figures plugin
+  eleventyConfig.amendLibrary("md", mdLib => {
+    mdLib.use(markdownItImplicitFigures, {
+      figcaption: true,  // Enable figcaption from alt text or title
+      copyAttrs: 'class' // Copy class attributes to figure element
+    });
+  });
+
   // Copy static assets to output directory
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("*.png");
@@ -18,6 +28,23 @@ export default function(eleventyConfig) {
       groups[groupKey].push(item);
     });
     return Object.entries(groups);
+  });
+
+  // Add date filters for article pages
+  eleventyConfig.addFilter("readableDate", (dateObj) => {
+    if (!dateObj) return '';
+    const date = new Date(dateObj);
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  });
+
+  eleventyConfig.addFilter("htmlDateString", (dateObj) => {
+    if (!dateObj) return '';
+    const date = new Date(dateObj);
+    return date.toISOString().split('T')[0];
   });
 
   return {

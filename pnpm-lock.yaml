@@ -15,6 +15,9 @@ importers:
       '@11ty/eleventy':
         specifier: 3.1.2
         version: 3.1.2
+      markdown-it-implicit-figures:
+        specifier: 0.12.0
+        version: 0.12.0
       npm-run-all:
         specifier: 4.1.5
         version: 4.1.5
@@ -734,6 +737,10 @@ packages:
   luxon@3.7.2:
     resolution: {integrity: sha512-vtEhXh/gNjI9Yg1u4jX/0YVPMvxzHuGgCm6tC5kZyb08yjGWGnqAjGJvcXbqQR2P3MyMEFnRbpcdFS6PBcLqew==}
     engines: {node: '>=12'}
+
+  markdown-it-implicit-figures@0.12.0:
+    resolution: {integrity: sha512-IeD2V74f3ZBYrZ+bz/9uEGii0S61BYoD2731qsHTgYLlENUrTevlgODScScS1CK44/TV9ddlufGHCYCQueh1rw==}
+    engines: {node: '>=0.10.0'}
 
   markdown-it@14.1.0:
     resolution: {integrity: sha512-a54IwgWPaeBCAAsv13YgmALOF1elABB08FxO9i+r4VFk5Vl4pKokRPeX8u5TCgSsPi6ec1otfLjdOpVcgbpshg==}
@@ -1985,6 +1992,8 @@ snapshots:
       strip-bom: 3.0.0
 
   luxon@3.7.2: {}
+
+  markdown-it-implicit-figures@0.12.0: {}
 
   markdown-it@14.1.0:
     dependencies:
