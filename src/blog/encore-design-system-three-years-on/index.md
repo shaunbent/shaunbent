@@ -2,6 +2,7 @@
 layout: article.njk
 title: "Can I get an Encore? Spotify's Design System, Three Years On"
 subtitle: "For an audio company, you're awfully quiet..."
+description: "What has Encore been up to? How has Encore grown and evolved in the last few years? And what have we learned?"
 date: 2022-12-01
 originalUrl: "https://spotify.design/article/can-i-get-an-encore-spotifys-design-system-three-years-on"
 originalPublication: "Spotify Design"

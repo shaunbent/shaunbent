@@ -18,9 +18,7 @@
 }
 
 .c-archive__item {
-  & + & {
-    margin-block-start: var(--s-1);
-  }
+  margin-block-start: var(--s-1);
 }
 
 .c-archive__item-details {
@@ -32,7 +30,7 @@
 
 .c-archive__item-title {
   font-size: var(--h6);
-  margin-block-end: var(--s-1);
+  line-height: 1.5;
 }
 
 .c-archive__item-date {

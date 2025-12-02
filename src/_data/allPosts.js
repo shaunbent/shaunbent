@@ -35,7 +35,7 @@ export default function() {
             month: 'long',
             year: 'numeric'
           }),
-          description: data.subtitle || data.description || ''
+          description: data.description || data.subtitle || ''
         };
       }
       // Handle new directory structure with index.md
@@ -56,7 +56,7 @@ export default function() {
               month: 'long',
               year: 'numeric'
             }),
-            description: data.subtitle || data.description || ''
+            description: data.description || data.subtitle || ''
           };
         }
       }
