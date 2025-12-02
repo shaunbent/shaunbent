@@ -11,16 +11,15 @@
 /**
  * Simple page-level setup.
  *
- * 1. Calculate the root font-size in rem
- * 2. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
+ * 1. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
  *    navigating between pages that do/do not have enough content to produce
  *    scrollbars naturally.
- * 3. Ensure the page always fills at least the entire height of the viewport.
+ * 2. Ensure the page always fills at least the entire height of the viewport.
  */
 
 html {
   font-family: var(--system-ui);
-  font-size: (config.$base-font-size / 16) + rem; /* [1] */
+  font-size: 1rem;
   line-height: config.$base-line-height;
   font-weight: 400;
   overflow-y: scroll; /* [1] */
