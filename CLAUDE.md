@@ -113,6 +113,7 @@ The site automatically deploys to GitHub Pages on pushes to `main` via GitHub Ac
 - Charset: UTF-8
 - Trim trailing whitespace
 - Insert final newline (except for `.md` files)
+- **JavaScript/TypeScript**: Use single quotes (`'`) for strings, not double quotes (`"`)
 
 ## Important Notes
 
