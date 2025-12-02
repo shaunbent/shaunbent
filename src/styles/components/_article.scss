@@ -38,25 +38,14 @@
 }
 
 .c-article__title {
-  font-size: var(--h1);
-  color: var(--c-text-highlight);
-  line-height: 1.2;
   margin-block-start: 0;
-  font-weight: 700;
   letter-spacing: -0.02em;
-
-  @include mq.mq($from: md) {
-    font-size: calc(var(--h1) * 1.2);
-  }
 }
 
 .c-article__subtitle {
   font-size: var(--h4);
-  color: var(--c-text);
-  opacity: 0.7;
+  color: var(--c-slate-gray);
   line-height: 1.5;
-  margin-block-start: var(--s-2);
-  font-weight: 400;
 }
 
 .c-article__meta {
@@ -65,8 +54,7 @@
   justify-content: center;
   gap: var(--s-2);
   font-size: var(--small);
-  color: var(--c-text);
-  opacity: 0.6;
+  color: var(--c-text-subdued);
   margin-block-start: var(--s-3);
 }
 
@@ -179,7 +167,7 @@
   padding-inline-start: var(--s-4);
   border-inline-start: 4px solid var(--c-decorative);
   font-style: italic;
-  opacity: 0.9;
+  color: var(--c-text-subdued);
 }
 
 .c-article__content blockquote p {
@@ -227,9 +215,7 @@
  * Breakout to wide column at desktop for visual impact
  */
 .c-article__content figure {
-  grid-column: content;
   margin-block-start: var(--s-5);
-  margin-inline: 0;
 
   @include mq.mq($from: md) {
     grid-column: wide;
@@ -237,17 +223,23 @@
 }
 
 .c-article__content figure img {
+  border-radius: 4px;
+}
+
+.c-article__content figure picture {
+  display: block;
+  max-width: 100%;
+}
+
+.c-article__content figure picture img {
   width: 100%;
   height: auto;
-  margin-block-start: 0;
-  border-radius: 4px;
-  display: block;
 }
 
 .c-article__content figcaption {
   font-size: var(--base-font-size);
   font-style: italic;
-  opacity: 0.7;
+  color: var(--c-slate-gray);
   margin-block-start: var(--s-2);
 }
 
