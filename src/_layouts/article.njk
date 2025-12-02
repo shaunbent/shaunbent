@@ -13,9 +13,7 @@ layout: base.njk
         {{ date | readableDate }}
       </time>
       {% endif %}
-      {% if readingTime %}
-      <span class="c-article__reading-time">{{ readingTime }} min read</span>
-      {% endif %}
+      <span class="c-article__reading-time">{{ content | readingTime }} min read</span>
     </div>
   </header>
 
