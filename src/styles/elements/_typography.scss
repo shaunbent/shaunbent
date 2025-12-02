@@ -32,6 +32,7 @@ a {
   text-decoration: underline;
   text-decoration-color: var(--c-decorative);
   text-underline-offset: var(--s--1);
+  cursor: pointer;
 
   &:active,
   &:hover {
