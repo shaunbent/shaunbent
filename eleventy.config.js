@@ -1,10 +1,10 @@
-import markdownItImplicitFigures from 'markdown-it-implicit-figures';
+import markdownItImageFigures from 'markdown-it-image-figures';
 import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
 
 export default function(eleventyConfig) {
-  // Configure markdown-it with implicit figures plugin
+  // Configure markdown-it with image figures plugin
   eleventyConfig.amendLibrary('md', mdLib => {
-    mdLib.use(markdownItImplicitFigures, {
+    mdLib.use(markdownItImageFigures, {
       figcaption: 'title',  // Use title attribute for caption, preserving alt text
       copyAttrs: 'class'    // Copy class attributes to figure element
     });
