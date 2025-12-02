@@ -31,7 +31,7 @@ layout: base.njk
       <main class="c-page__body">
         <div class="c-archive">
           <h2 class="c-archive__title">Posts</h2>
-          {% for year, items in posts | groupby("year") | reverse %}
+          {% for year, items in allPosts | groupby("year") | reverse %}
           <div class="c-archive__group">
             <h3 class="c-archive__group-title">{{ year }}</h3>
             {% for item in items %}
