@@ -40,6 +40,11 @@
   @include tools.mq($from: sm, $until: md) {
     flex: 0 0 auto;
   }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .c-masthead__bio {
