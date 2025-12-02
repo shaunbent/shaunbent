@@ -7,6 +7,9 @@
   <title>{{ title | default("Shaun Bent | Engineering Manager, Design System Leader & Accessibility Advocate") }}</title>
   <link rel="stylesheet" href="/css/style.css">
   <meta name="description" content="{{ description | default("Shaun Bent — an engineering manager, design system leader and accessibility advocate from the UK.") }}">
+  {% if originalUrl %}
+  <link rel="canonical" href="{{ originalUrl }}">
+  {% endif %}
   <meta property="og:image" content="">
   <meta property="og:image:alt" content="">
 
