@@ -1,0 +1,27 @@
+---
+layout: base.njk
+---
+<article class="c-article">
+  <header class="c-article__header">
+    <h1 class="c-article__title">{{ title }}</h1>
+    {% if subtitle %}
+    <p class="c-article__subtitle">{{ subtitle }}</p>
+    {% endif %}
+    <div class="c-article__meta">
+      {% if date %}
+      <time class="c-article__date" datetime="{{ date | htmlDateString }}">
+        {{ date | readableDate }}
+      </time>
+      {% endif %}
+      <span class="c-article__reading-time">{{ content | readingTime }} min read</span>
+    </div>
+  </header>
+
+  <div class="c-article__content">
+    {{ content | safe }}
+  </div>
+
+  <footer class="c-article__footer">
+    <a href="/" class="c-article__back-link">← Back to home</a>
+  </footer>
+</article>

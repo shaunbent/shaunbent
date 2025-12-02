@@ -2,4 +2,4 @@
 @use 'spacing';
 @use 'color';
 
-@include tools.type-scale();
+@include tools.type-scale(1.2);
