@@ -8,7 +8,7 @@ unlisted: true
 
 ![](./images/Hero.webp)
 
-A few years ago, I walked out of a particularly frustrating meeting discussing federated design systems and wrote down a title: "The Fallacy of Federated Design Systems." I never got around to writing the piece. Then Nathan Curtis published [an article with that same title](https://medium.com/@nathanacurtis/the-fallacy-of-federated-design-systems-23b9a9a05542), and he nailed it.
+A few years ago, I walked out of a particularly frustrating meeting discussing federated design systems and wrote down a title: _"The Fallacy of Federated Design Systems."_ I never got around to writing the piece. Then Nathan Curtis published [an article with that same title](https://medium.com/@nathanacurtis/the-fallacy-of-federated-design-systems-23b9a9a05542), and he nailed it.
 
 Nathan's analysis of the myths surrounding the federated model, the way these systems are sold, and the false promises about distributed ownership and community contributions is spot on. He dismantles the theory brilliantly. But here's what I want to explore: what happens when organisations try to make federated work anyway? Not because they misunderstand the theory, but because the promises sound genuinely appealing.
 
