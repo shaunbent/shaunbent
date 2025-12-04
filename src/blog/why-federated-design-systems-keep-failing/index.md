@@ -59,9 +59,9 @@ But it never happened. As we established previously, the centralized team wasn't
 
 **The second attempt** took a different approach. Teams were meant to create domain-specific components; the playback team would build the play button, the team responsible for search would build search components, and so on. Sounds logical.
 
-![](./images/Reuse.webp)
-
 But there was no discovery mechanism. Teams couldn't find what already existed, so they built their own. The result? Average component reuse of 1.2 times per component, compared to 200 times for components from the centralised mobile design system. Within 12 months, around 1,000 new components were created. Oh, and these didn’t replace the components from the first attempt; they were net-new things.
+
+![](./images/Reuse.webp)
 
 Both systems suffered from the same core problem. Teams built what they needed for their immediate use case. Without dedicated effort to consider reusability, make components discoverable, or consolidate similar patterns, you get exponential growth of barely reused components.
 
