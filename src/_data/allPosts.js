@@ -24,6 +24,11 @@ export default function() {
         const fileContent = readFileSync(filePath, 'utf-8');
         const { data } = matter(fileContent);
 
+        // Skip unlisted posts
+        if (data.unlisted === true) {
+          return [];
+        }
+
         const postDate = data.date ? new Date(data.date) : new Date();
         const url = `/blog/${entry.name.replace('.md', '')}/`;
 
@@ -44,6 +49,11 @@ export default function() {
         if (existsSync(indexPath)) {
           const fileContent = readFileSync(indexPath, 'utf-8');
           const { data } = matter(fileContent);
+
+          // Skip unlisted posts
+          if (data.unlisted === true) {
+            return [];
+          }
 
           const postDate = data.date ? new Date(data.date) : new Date();
           const url = `/blog/${entry.name}/`;
