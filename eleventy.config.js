@@ -36,6 +36,7 @@ export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('*.ico');
   eleventyConfig.addPassthroughCopy('*.webmanifest');
   eleventyConfig.addPassthroughCopy('CNAME');
+  eleventyConfig.addPassthroughCopy('robots.txt');
 
   // Add custom groupBy filter
   eleventyConfig.addFilter('groupby', (array, key) => {

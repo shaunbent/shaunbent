@@ -1,6 +1,7 @@
 {
-  "short_name": "",
-  "name": "",
+  "short_name": "Shaun Bent",
+  "name": "Shaun Bent - Engineering Manager & Design System Leader",
+  "description": "Personal portfolio and blog of Shaun Bent, an engineering manager, design system leader and accessibility advocate from the UK.",
   "icons": [{
       "src": "icon.png",
       "type": "image/png",
@@ -8,5 +9,6 @@
   }],
   "start_url": "/?utm_source=homescreen",
   "background_color": "#fafafa",
-  "theme_color": "#fafafa"
+  "theme_color": "#fafafa",
+  "display": "standalone"
 }

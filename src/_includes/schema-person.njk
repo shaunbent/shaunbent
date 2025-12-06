@@ -1,0 +1,12 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ site.author.name }}",
+  "url": "{{ site.url }}",
+  "jobTitle": "{{ site.author.jobTitle }}",
+  "sameAs": [
+    {% for socialUrl in site.author.sameAs %}"{{ socialUrl }}"{% if not loop.last %},{% endif %}{% endfor %}
+  ]
+}
+</script>
