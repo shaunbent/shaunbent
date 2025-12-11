@@ -168,3 +168,5 @@ If you're considering a federated model, ask yourself honestly: Do you have the 
 A well-run centralised team delivers value faster, with lower coordination overhead and clearer accountability. Nathan Curtis was right that federated is a facet, not a model. What  I've learned from watching it fail twice is how much damage these attempts do beyond just the immediate system. They poison the well, making it harder to secure investment for _any future_ design system work. That's why starting with a solid centralised foundation matters - it builds trust and proves value, giving you the credibility to evolve towards more distributed patterns later.
 
 Design systems are already challenging. Don't make them harder than they need to be.
+
+_Thank you to those in the [Redwood community](https://bencallahan.com/redwoods) who helped to review and offering feedback on this article. 💜_
