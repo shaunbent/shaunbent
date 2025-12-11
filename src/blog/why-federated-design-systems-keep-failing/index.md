@@ -58,7 +58,7 @@ The idea behind this duplication-friendly approach was straightforward: prioriti
 
 ![An illustration to represent the consolidation of different components into a single component. There are four rows of shapes, each row contains different colored shapes with an arrow pointing to a single shape at the end of each row](./images/Consolidation.webp)
 
-But it never happened. As we established previously, the centralized team wasn't given the time to do this work. The promised consolidation phase never occurred. As a result, the system only ever grew; it never contracted. At one point, it contained over 1,500 individual components across two platforms.
+But it never happened. As we established previously, the centralized team wasn't given the time to do this work. The promised consolidation phase never occurred. As a result, the system only ever grew; it never contracted. At one point, it contained over 1,500 individual components.
 
 ![A line graph showing number of components over time. The line grows exponentially. At the top of the line, there is a label that says 1500 components](./images/Growth.webp)
 
@@ -76,7 +76,7 @@ If Team A contributes a component and Team B needs changes to it, who is respons
 
 In the first attempt, owning teams pushed back on reuse. They didn't want the dependency. They didn't want to be responsible for supporting the needs of other teams in addition to their own work. The risk here is that you turn feature teams into pseudo-platform teams, now helping other people's problems alongside their existing commitments.
 
-This tension is inherent to federated models. You're asking teams to take on platform responsibilities without giving them the focus, resources, or authority that platform teams need to be effective. And there's a deeper issue: platform work requires a different skill set entirely. It's about thinking systematically, how components interact, how patterns scale across use cases, rather than optimizing for a single product's needs. Feature teams are trained to solve problems perfectly for their context. Platform teams need to solve them adequately across many contexts. That's a fundamentally different mindset, and you can't just ask teams to switch between the two.
+This tension is inherent to federated models. You're asking teams to take on platform responsibilities without giving them the focus, resources, or authority that platform teams need to be effective. And there's a deeper issue: platform work requires a different skill set entirely. It's about thinking systematically, how components interact, how patterns scale across use cases, rather than optimizing for a single product's needs. Feature teams are focused on solving problems perfectly for their context. Platform teams need to solve them adequately across many contexts. That's a fundamentally different mindset, and you can't just ask teams to switch between the two.
 
 ## The promise: no need for a centralised team
 
@@ -143,7 +143,7 @@ Most organisations don't have these things in place, and building them requires 
 
 Here's what I keep coming back to: at the point where you've invested enough time and energy to make federated work properly, would that same investment have been better spent on a well-run centralised team?
 
-![A totally made up bar chart showing energy/effort of implementing a federated design system compared to a centralised system. The bar for federated is larger. The difference between the two bars is highlighted with the text: "How big is this gap?"](./images/Designer_Developer.webp "A totally made up graph for illustration purposes")
+![A totally made up bar chart showing energy/effort of implementing a federated design system compared to a centralised system. The bar for federated is larger. The difference between the two bars is highlighted with the text: "How big is this gap?"](./images/Energy.webp "A totally made up graph for illustration purposes")
 
 What does a centralised model require? A dedicated team. Clear ownership. Processes.
 
