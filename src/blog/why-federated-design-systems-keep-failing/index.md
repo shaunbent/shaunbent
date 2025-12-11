@@ -5,11 +5,12 @@ date: 2025-12-08
 description: "Why do federated design systems keep failing? I watched it happen twice at Spotify. Here's what actually happened, where they broke down, and why centralised models usually work better."
 unlisted: true
 image: "./images/Hero.webp"
+imageAlt: "An illustation to represent a federated design system. There are several different sized and colored shapes randomly scattered. There are three arrows all pointing towards a single point to represent the shared system. On the system is an big exclamation mark, warning triangle"
 ---
 
 _I spent nine years at Spotify leading design systems and accessibility. During that time, I learned as much from what failed as from what succeeded. I'm sharing these insights not to critique decisions made at the time, but because I believe they're valuable and can help others navigate similar challenges. This is the first in a series exploring those lessons._
 
-![](./images/Hero.webp)
+![An illustation to represent a federated design system. There are several different sized and colored shapes randomly scattered. There are three arrows all pointing towards a single point to represent the shared system. On the system is an big exclamation mark, warning triangle](./images/Hero.webp)
 
 A few years ago, I walked out of a particularly frustrating meeting discussing federated design systems and wrote down a title: _"The Fallacy of Federated Design Systems."_ I never got around to writing the piece. Then Nathan Curtis published [an article with that same title](https://medium.com/@nathanacurtis/the-fallacy-of-federated-design-systems-23b9a9a05542), and he nailed it.
 
@@ -23,7 +24,7 @@ During my nine years at Spotify, I watched the federated approach fail twice, in
 
 The federated model suggests that design system work can be distributed across multiple teams without a central authority. It sounds democratic. It sounds efficient. It sounds empowering. In practice, it creates an ownership vacuum.
 
-![](./images/Ownership.webp)
+![An illustration to represent distributed ownership. Several groups of different colored shapes are grouped together, each group has an arrow pointing towards the center which has an icon to represent the shared design system](./images/Ownership.webp)
 
 Who's responsible for defining the architecture of the design system? Who establishes and evolves the processes needed to scale? Who ensures quality and consistency? Who maintains the infrastructure on which the system depends? Who deals with the unknown challenges that will inevitably occur?
 
@@ -33,7 +34,7 @@ I've observed a pattern in organisations that pursue federated models. They tend
 
 ### What this looks like in practice
 
-I've seen this play out twice at Spotify in mobile-focused systems that operated separately from the core design system.
+I've seen this play out twice at Spotify in a team focused on owning a specific part of the Spotify ecosystem, operating separately from the core design system.
 
 **The first attempt:** Was a federated model with a small central team providing support, guidance, and frameworks. The promise was solid. In practice, the organisation struggled to understand the purpose and value of the central team, so they were treated as a free resource and constantly pulled into other projects. The promised support, guidance, and frameworks that would have made the system viable never happened. No one was accountable for the fundamentals. The basic work of operating a design system simply didn't happen because nobody was clearly responsible for doing it. Even when someone was responsible, they weren't given the time to do the work. The result was degraded sentiment towards design systems within that department.
 
@@ -56,17 +57,17 @@ The federated model assumes that teams will find time for this work in addition 
 **The first attempt** encouraged duplication with the promise of later consolidation. Engineers would copy and tweak code, creating new components regardless of how similar they were to existing ones. The system followed a defined naming strategy that enabled traceability; you could see exactly which components were created by which teams and where they were used.
 The idea behind this duplication-friendly approach was straightforward: prioritize speed by letting teams build exactly what they needed. The bet was that this autonomy would keep teams moving fast, and the central team would consolidate these duplicates later into single, reusable patterns.
 
-![](./images/Consolidation.webp)
+![An illustration to represent the consolidation of different components into a single component. There are four rows of shapes, each row contains different colored shapes with an arrow pointing to a single shape at the end of each row](./images/Consolidation.webp)
 
-But it never happened. As we established previously, the centralized team wasn't given the time to do this work. The promised consolidation phase never occurred. As a result, the system only ever grew; it never contracted. At one point, it contained over 1,500 individual components across iOS and Android.
+But it never happened. As we established previously, the centralized team wasn't given the time to do this work. The promised consolidation phase never occurred. As a result, the system only ever grew; it never contracted. At one point, it contained over 1,500 individual components across two platforms.
 
-![](./images/Growth.webp)
+![A line graph showing number of components over time. The line grows exponentially. At the top of the line, there is a label that says 1500 components](./images/Growth.webp)
 
 **The second attempt** took a different approach. Teams were meant to create domain-specific components; the playback team would build the play button, the team responsible for search would build search components, and so on. Sounds logical.
 
-But there was no discovery mechanism. Teams couldn't find what already existed, so they built their own. The result? Average component reuse of 1.2 times per component, compared to 200 times for components from the centralised mobile design system. Within 12 months, around 1,000 new components were created. Oh, and these didn’t replace the components from the first attempt; they were net-new things.
+But there was no discovery mechanism. Teams couldn't find what already existed, so they built their own. The result? Average component reuse of 1.2 times per component, compared to 200 times for components from the centralised design system. Within 12 months, around 1,000 new components were created. Oh, and these didn’t replace the components from the first attempt; they were net-new things.
 
-![](./images/Reuse.webp)
+![A bar chart showing the average component reuse for different types of design system. For the federated system the bar is very small and the label says 1.2x, for the centralised design system the bar is large and the label says 200x](./images/Reuse.webp)
 
 Both systems suffered from the same core problem. Teams built what they needed for their immediate use case. Without dedicated effort to consider reusability, make components discoverable, or consolidate similar patterns, you get exponential growth of barely reused components.
 
@@ -82,7 +83,7 @@ This tension is inherent to federated models. You're asking teams to take on pla
 
 This promise is fundamentally about money. The federated model gets framed as a way to get a design system "for free." You can save the cost of staffing a dedicated team by distributing the work across existing teams.
 
-![](./images/Real_Cost.webp)
+![An illustration to represent the removal of a centralised team to save money. All of the things assoicated with a centralised team (code, design, documentation and people) is crossed out with an arrow pointing to a big bag of money](./images/Real_Cost.webp)
 
 This thinking is both naive and demonstrates a significant misunderstanding of what's required to build and maintain a design system at scale. This thinking also tends to emanate from those in leadership positions, often abstracted away from the details and nuances of running a design system.
 
@@ -106,7 +107,7 @@ The second attempt is particularly revealing because it illustrates what happens
 
 One consistent failure across both attempts was the persistent divide between design and engineering, a problem that federated models struggle to solve and often exacerbate.
 
-![](./images/Designer_Developer.webp)
+![An illustration of a person at a computer screen to represent an engineer and a pot with a pencil and paint brush to represent a designer. There is a solid line between them to represent the divide](./images/Designer_Developer.webp)
 
 **The first attempt** created a fundamental mismatch. Designers in the central team operated like a traditional centralized design system, creating a shared Figma library of components. But the engineering side was federated. This meant designers had centralized resources and shared components, but engineers lacked code implementations that matched what designers were sharing. There was immediate friction.
 
@@ -142,6 +143,8 @@ So what would you actually need?
 Most organisations don't have these things in place, and building them requires significant overhead. At that point, you're spending the effort anyway, just in a more complicated way.
 
 Here's what I keep coming back to: at the point where you've invested enough time and energy to make federated work properly, would that same investment have been better spent on a well-run centralised team?
+
+![A totally made up bar chart showing energy/effort of implementing a federated design system compared to a centralised system. The bar for federated is larger. The difference between the two bars is highlighted with the text: "How big is this gap?"](./images/Designer_Developer.webp "A totally made up graph for illustration purposes")
 
 What does a centralised model require? A dedicated team. Clear ownership. Processes.
 
