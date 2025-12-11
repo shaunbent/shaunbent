@@ -100,7 +100,7 @@ Both of Spotify’s attempts at federated struggled with the same fundamental pr
 
 At scale, the effort required to support a federated model often exceeds that of a centralised one. You're just spreading that cost across multiple teams who are less equipped to handle it, and you're paying the overhead of poor coordination on top.
 
-The second attempt is particularly revealing because it illustrates what happens when the necessary investment is not made. The previous central team was disbanded with no transition plan. There was zero strategy for component discovery. No tooling. No processes. They essentially said the word "reuse" and expected it to happen without any organisational infrastructure to support it.
+The second attempt is particularly revealing because it illustrates what happens when the necessary investment is not made. The previous central team was disbanded with no transition plan, and there was zero strategy for component discovery. No tooling or processes. Reuse was positioned as the goal, but nothing was built to actually enable it. Without the infrastructure to support distributed ownership, teams defaulted to what they knew: building their own solutions.
 
 ## The design-engineering divide: why federated can't solve it
 
