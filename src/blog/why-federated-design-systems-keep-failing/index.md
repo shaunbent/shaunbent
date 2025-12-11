@@ -45,7 +45,7 @@ Both times, the same pattern emerged: lack of clear ownership led to the same ou
 
 Our teams are already stretched. Pressure to deliver, meet deadlines, add new features, fix bugs, and address tech debt. When does a team actually have time to contribute a component to a shared system?
 
-Creating a quality design system component isn't as simple as moving a feature implementation into a shared repository or Figma library. It requires real effort to ensure a component can scale to different use cases, meet accessibility and localization requirements, and follow a consistent API that aligns with other components in the system. And that's just the component itself. You also need documentation, design-code alignment, and ongoing maintenance. These are specializations.
+Creating a quality design system component isn't as simple as moving a feature implementation into a shared repository or Figma library. It requires real effort to ensure a component can scale to different use cases, meet accessibility and localisation requirements, and follow a consistent API that aligns with other components in the system. And that's just the component itself. You also need documentation, design-code alignment, and ongoing maintenance. These are specialisations.
 
 Designing for reuse, scale, and consistency are skills that take time and experience to develop and require leadership. Feature teams aren't trained in this work, and frankly, they shouldn't have to be. Their expertise is in shipping features, not in building foundational systems and having the broad context required.
 
