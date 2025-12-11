@@ -7,6 +7,8 @@ date: 2022-12-01
 originalUrl: "https://spotify.design/article/can-i-get-an-encore-spotifys-design-system-three-years-on"
 originalPublication: "Spotify Design"
 originalDate: 2022-12-01
+image: "./images/encore-hero.webp"
+imageAlt: "An illustration of an open mouth, with a speech bubble containing the Encore logo"
 ---
 
 _This article was originally co-written with Tyce Clee, Engineering Manager and published on the [Spotify Design blog](https://spotify.design/article/can-i-get-an-encore-spotifys-design-system-three-years-on) in December 2022. It has been republished here for preservation._

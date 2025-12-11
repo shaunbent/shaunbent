@@ -6,11 +6,13 @@ originalUrl: "https://spotify.design/article/reimagining-design-systems-at-spoti
 originalPublication: "Spotify Design"
 originalDate: 2020-09-01
 description: "In November 2019 we introduced Encore, Spotify's new approach to design systems. What motivated us to create Encore, how it's structured? and how it's different from what we've tried before."
+image: "./images/Reimagining_Design_Systems_at_Spotify.webp"
+
 ---
 
 _This article was originally co-written with Marina Posniak and Gerrit Kaiser and published on the [Spotify Design blog](https://spotify.design/article/reimagining-design-systems-at-spotify) in September 2020. It has been republished here for preservation._
 
-![An illustration of an open mouth, with a speech bubble containing the Encore logo](./images/Reimagining_Design_Systems_at_Spotify.webp)
+![](./images/Reimagining_Design_Systems_at_Spotify.webp)
 
 In November we introduced Encore, Spotify's new approach to design systems. What's cool about Encore is that it's not just one thing: it's actually a family of design systems, managed by distributed teams. In this post, we'll share what motivated us to create Encore, how it's structured, and how it's different from what we've tried before.
 
