@@ -4,7 +4,7 @@
   "@type": "BlogPosting",
   "headline": "{{ title }}",
   "description": "{{ description | default(subtitle) }}",
-  "image": {% if image %}"{{ site.url }}{{ image }}"{% else %}"{{ site.url }}{{ site.image.default }}"{% endif %},
+  "image": {% if image %}{% set ogImageUrl = image | ogImage(page.inputPath) %}{% if ogImageUrl %}"{{ site.url }}{{ ogImageUrl }}"{% else %}"{{ site.url }}{{ site.image.default }}"{% endif %}{% else %}"{{ site.url }}{{ site.image.default }}"{% endif %},
   "datePublished": "{{ date | htmlDateString }}T00:00:00Z",
   {% if modifiedDate %}"dateModified": "{{ modifiedDate | htmlDateString }}T00:00:00Z",{% endif %}
   "author": {
