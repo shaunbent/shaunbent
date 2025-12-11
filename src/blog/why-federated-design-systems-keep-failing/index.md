@@ -3,7 +3,6 @@ layout: article.njk
 title: "Why Federated Design Systems Keep Failing"
 date: 2025-12-08
 description: "Why do federated design systems keep failing? I watched it happen twice at Spotify. Here's what actually happened, where they broke down, and why centralised models usually work better."
-unlisted: true
 image: "./images/Hero.webp"
 imageAlt: "An illustation to represent a federated design system. There are several different sized and colored shapes randomly scattered. There are three arrows all pointing towards a single point to represent the shared system. On the system is an big exclamation mark, warning triangle"
 ---
