@@ -7,6 +7,8 @@ unlisted: true
 image: "./images/Hero.webp"
 ---
 
+_I spent nine years at Spotify leading design systems and accessibility. During that time, I learned as much from what failed as from what succeeded. I'm sharing these insights not to critique decisions made at the time, but because I believe they're valuable and can help others navigate similar challenges. This is the first in a series exploring those lessons._
+
 ![](./images/Hero.webp)
 
 A few years ago, I walked out of a particularly frustrating meeting discussing federated design systems and wrote down a title: _"The Fallacy of Federated Design Systems."_ I never got around to writing the piece. Then Nathan Curtis published [an article with that same title](https://medium.com/@nathanacurtis/the-fallacy-of-federated-design-systems-23b9a9a05542), and he nailed it.
@@ -43,7 +45,9 @@ Both times, the same pattern emerged: lack of clear ownership led to the same ou
 
 Our teams are already stretched. Pressure to deliver, meet deadlines, add new features, fix bugs, and address tech debt. When does a team actually have time to contribute a component to a shared system?
 
-Creating a quality design system component isn't as simple as copying feature code into a shared repository. It takes real effort to ensure a component can scale to different use cases, meet accessibility and localization requirements, follow a consistent API that aligns with other components in the system, create documentation, and ensure alignment between design and code. These are specializations. Designing for reuse, scale, and consistency are skills that take time and experience to develop and require leadership. Feature teams aren't trained in this work, and frankly, they shouldn't have to be. Their expertise is in shipping features, not in building foundational systems and having the broad context required.
+Creating a quality design system component isn't as simple as moving a feature implementation into a shared repository or Figma library. It requires real effort to ensure a component can scale to different use cases, meet accessibility and localization requirements, and follow a consistent API that aligns with other components in the system. And that's just the component itself. You also need documentation, design-code alignment, and ongoing maintenance. These are specializations.
+
+Designing for reuse, scale, and consistency are skills that take time and experience to develop and require leadership. Feature teams aren't trained in this work, and frankly, they shouldn't have to be. Their expertise is in shipping features, not in building foundational systems and having the broad context required.
 
 The federated model assumes that teams will find time for this work in addition to their existing commitments. They won't, and they don't.
 
@@ -72,7 +76,7 @@ If Team A contributes a component and Team B needs changes to it, who is respons
 
 In the first attempt, owning teams pushed back on reuse. They didn't want the dependency. They didn't want to be responsible for supporting the needs of other teams in addition to their own work. The risk here is that you turn feature teams into pseudo-platform teams, now helping other people's problems alongside their existing commitments.
 
-This tension is inherent to federated models. You're asking teams to take on platform responsibilities without giving them the focus, resources, or authority that platform teams need to be effective.
+This tension is inherent to federated models. You're asking teams to take on platform responsibilities without giving them the focus, resources, or authority that platform teams need to be effective. And there's a deeper issue: platform work requires a different skill set entirely. It's about thinking systematically, how components interact, how patterns scale across use cases, rather than optimizing for a single product's needs. Feature teams are trained to solve problems perfectly for their context. Platform teams need to solve them adequately across many contexts. That's a fundamentally different mindset, and you can't just ask teams to switch between the two.
 
 ## The promise: no need for a centralised team
 
@@ -133,6 +137,7 @@ So what would you actually need?
 - A scale that's small enough to keep coordination overhead manageable
 - Multiple teams that genuinely have overlapping needs, who benefit from shared ownership
 - Teams with dedicated capacity beyond feature delivery to invest in platform work
+- A culture deeply rooted in distributed, collaborative thinking (organisations with strong open-source traditions sometimes have this naturally)
 
 Most organisations don't have these things in place, and building them requires significant overhead. At that point, you're spending the effort anyway, just in a more complicated way.
 
