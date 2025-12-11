@@ -1,5 +1,11 @@
 import markdownItImageFigures from 'markdown-it-image-figures';
 import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
+import Image from '@11ty/eleventy-img';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export default function(eleventyConfig) {
   // Configure markdown-it with image figures plugin
@@ -80,6 +86,55 @@ export default function(eleventyConfig) {
     const wordCount = content.split(/\s+/).length;
     const readingTime = Math.ceil(wordCount / wordsPerMinute);
     return readingTime;
+  });
+
+  // Add OG image processing filter
+  // Generates optimized Open Graph images (1200x630) from relative paths
+  eleventyConfig.addFilter('ogImage', async function(imagePath, pageInputPath) {
+    if (!imagePath) return null;
+
+    // If it's already an absolute URL, return as-is
+    if (imagePath.startsWith('http') || imagePath.startsWith('//')) {
+      return imagePath;
+    }
+
+    // If it's already an absolute path from site root, convert to file system path
+    let inputPath;
+    if (imagePath.startsWith('/')) {
+      inputPath = path.join(__dirname, 'src', imagePath);
+    } else {
+      // Relative path - resolve relative to the page's directory
+      const pageDir = path.dirname(pageInputPath);
+      inputPath = path.join(pageDir, imagePath);
+    }
+
+    try {
+      // Generate OG-optimized image (1200x630 for optimal social sharing)
+      const metadata = await Image(inputPath, {
+        widths: [1200],
+        formats: ['jpeg'],
+        outputDir: './_site/images/og/',
+        urlPath: '/images/og/',
+        sharpJpegOptions: {
+          quality: 90,
+        },
+        filenameFormat: function (id, src, width, format) {
+          const extension = path.extname(src);
+          const name = path.basename(src, extension);
+          return `${name}-${id}.${format}`;
+        },
+        cacheOptions: {
+          duration: '1d',
+          directory: '.cache',
+        }
+      });
+
+      // Return the URL of the generated image
+      return metadata.jpeg[0].url;
+    } catch (error) {
+      console.error(`Error processing OG image ${imagePath}:`, error);
+      return null;
+    }
   });
 
   // Create collection for blog posts

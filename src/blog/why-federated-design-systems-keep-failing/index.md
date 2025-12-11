@@ -4,6 +4,7 @@ title: "Why Federated Design Systems Keep Failing"
 date: 2025-12-08
 description: "Why do federated design systems keep failing? I watched it happen twice at Spotify. Here's what actually happened, where they broke down, and why centralised models usually work better."
 unlisted: true
+image: "./images/Hero.webp"
 ---
 
 ![](./images/Hero.webp)
