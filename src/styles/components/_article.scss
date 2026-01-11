@@ -222,6 +222,19 @@
   }
 }
 
+/**
+ * Small image variant
+ * Constrains images to a narrower width for memes, diagrams, etc.
+ */
+.c-article__image--sm {
+  max-width: 500px;
+  margin-inline: auto;
+
+  @include mq.mq($from: md) {
+    grid-column: content;
+  }
+}
+
 .c-article__content figure img {
   border-radius: 4px;
 }

@@ -1,4 +1,5 @@
 import markdownItImageFigures from 'markdown-it-image-figures';
+import markdownItAttrs from 'markdown-it-attrs';
 import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
 import Image from '@11ty/eleventy-img';
 import path from 'path';
@@ -8,8 +9,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default function(eleventyConfig) {
-  // Configure markdown-it with image figures plugin
+  // Configure markdown-it with attrs and image figures plugins
   eleventyConfig.amendLibrary('md', mdLib => {
+    mdLib.use(markdownItAttrs);
     mdLib.use(markdownItImageFigures, {
       figcaption: 'title',  // Use title attribute for caption, preserving alt text
       copyAttrs: 'class'    // Copy class attributes to figure element
