@@ -4,7 +4,7 @@ title: "Is There Too Much Design in Design Systems?"
 date: 2026-01-12
 description: "Why are we hiring so many designers? Most design system roles are design-focused, but the biggest value comes from code. Are we building design systems, or just designing them?"
 image: "./images/Hero.webp"
-imageAlt: "An illustation to represent the imbalance in design system here. A yellow background with black text. The text in the centre reads 3:1, on the left there is a series of icons to represent designers, on the right there are far less icons to represent engineers"
+imageAlt: "An illustration to represent the imbalance in design system hiring. A yellow background with black text. The text in the centre reads 3:1, on the left there is a series of icons to represent designers, and on the right there are far fewer icons to represent engineers"
 ---
 
 For a while now, I've been noticing a pattern in design system job postings. Designers everywhere. Engineers, not so much.
