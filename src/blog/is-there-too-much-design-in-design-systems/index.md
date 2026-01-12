@@ -33,7 +33,7 @@ This is the promise of design systems: efficiency and consistency at scale. That
 Users don't interact with your Figma library. They interact with what is shipped in code.
 
 ## What I saw work
-At Spotify, our design system team ran with a deliberately high ratio of engineers to designers. Originally around 6:1 and then reduced to 4:1 after a few rounds of layoffs.
+In my last team, our design system team ran with a deliberately high ratio of engineers to designers. Originally around 6:1 and then reduced to 4:1 after a few rounds of layoffs.
 
 Both our design and engineering outputs created value, but not in equal proportion. We understood that a significant portion of our value came from code implementation, and we staffed accordingly. Our system was heavily automated, with algorithmic token generation, sophisticated tooling, and infrastructure that required significant engineering investment to build and maintain.
 
