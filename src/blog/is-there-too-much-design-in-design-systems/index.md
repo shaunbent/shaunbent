@@ -5,7 +5,6 @@ date: 2026-01-12
 description: "Why are we hiring so many designers? Most design system roles are design-focused, but the biggest value comes from code. Are we building design systems, or just designing them?"
 image: "./images/Hero.webp"
 imageAlt: "An illustation to represent the imbalance in design system here. A yellow background with black text. The text in the centre reads 3:1, on the left there is a series of icons to represent designers, on the right there are far less icons to represent engineers"
-unlisted: true
 ---
 
 For a while now, I've been noticing a pattern in design system job postings. Designers everywhere. Engineers, not so much.
@@ -47,6 +46,8 @@ If that ratio had been inverted, with four designers for every engineer, we'd ha
 When I look at that 3:1 figure, I keep wondering what's going on behind the scenes. A few possibilities (read educated guesses):
 
 **These are all new design systems, early in their maturity.** If you're just starting out, establishing design foundations before bringing in engineering capacity might make sense. Design first, implement later. But from reading a lot of these job descriptions, most are for roles working on existing design systems. And how many organisations have been in that "early maturity" phase for a year or more?
+
+**Designer roles have higher turnover.** Maybe the ratio of open roles doesn't actually reflect the makeup of our teams. If designers move between positions more frequently than engineers, you'd see more designer roles advertised even if team compositions are more balanced. The job market might be skewed by churn, not by how teams are actually structured.
 
 **Feature teams are doing the implementation.** Design system designers create the specs, and engineers on product teams build the components. This can work, but it means platform work is landing on people whose primary job is shipping features. That's a recipe for [inconsistent quality and competing priorities](https://www.shaunbent.co.uk/blog/why-federated-design-systems-keep-failing/#:~:text=The%20promise%3A%20contributions%20from%20multiple%20teams).
 
