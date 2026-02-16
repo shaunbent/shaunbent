@@ -3,11 +3,12 @@ layout: article.njk
 title: "Why Federated Design Systems Keep Failing"
 date: 2025-12-08
 description: "Why do federated design systems keep failing? I watched it happen twice at Spotify. Here's what actually happened, where they broke down, and why centralised models usually work better."
+category: "Lessons from Spotify"
 image: "./images/Hero.webp"
 imageAlt: "An illustation to represent a federated design system. There are several different sized and colored shapes randomly scattered. There are three arrows all pointing towards a single point to represent the shared system. On the system is an big exclamation mark, warning triangle"
 ---
 
-_I spent nine years at Spotify leading design systems and accessibility. During that time, I learned as much from what failed as from what succeeded. I'm sharing these insights not to critique decisions made at the time, but because I believe they're valuable and can help others navigate similar challenges. This is the first in a series exploring those lessons._
+_I spent nine years at Spotify leading design systems and accessibility. During that time, I learned as much from what failed as from what succeeded. I'm sharing these insights not to critique decisions made at the time, but because I believe they're valuable and can help others navigate similar challenges. This is the [first in a series](/lessons-from-spotify/) exploring those lessons._
 
 ![An illustation to represent a federated design system. There are several different sized and colored shapes randomly scattered. There are three arrows all pointing towards a single point to represent the shared system. On the system is an big exclamation mark, warning triangle](./images/Hero.webp)
 
