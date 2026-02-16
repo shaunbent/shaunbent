@@ -8,7 +8,20 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 export default function() {
   // Read external posts from JSON file
   const postsPath = join(__dirname, 'posts.json');
-  const externalPosts = JSON.parse(readFileSync(postsPath, 'utf-8'));
+  const externalPosts = JSON.parse(readFileSync(postsPath, 'utf-8')).map(post => {
+    const postDate = post.date ? new Date(post.date + 'T00:00:00Z') : null;
+    return {
+      ...post,
+      date: postDate
+        ? postDate.toLocaleDateString('en-US', {
+            month: 'long',
+            year: 'numeric',
+            timeZone: 'UTC'
+          })
+        : post.date,
+      rawDate: postDate
+    };
+  });
 
   // Read blog posts from src/blog directory
   const blogDir = join(__dirname, '../blog');
