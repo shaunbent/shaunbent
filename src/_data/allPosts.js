@@ -40,7 +40,9 @@ export default function() {
             month: 'long',
             year: 'numeric'
           }),
-          description: data.description || data.subtitle || ''
+          rawDate: postDate,
+          description: data.description || data.subtitle || '',
+          category: data.category || null
         };
       }
       // Handle new directory structure with index.md
@@ -66,7 +68,9 @@ export default function() {
               month: 'long',
               year: 'numeric'
             }),
-            description: data.description || data.subtitle || ''
+            rawDate: postDate,
+            description: data.description || data.subtitle || '',
+            category: data.category || null
           };
         }
       }
@@ -80,11 +84,15 @@ export default function() {
   // Merge external and internal posts
   const allPosts = [...externalPosts, ...internalPosts];
 
-  // Sort by year (descending), then by title
+  // Sort by year (descending), then by date (descending)
   return allPosts.sort((a, b) => {
     if (b.year !== a.year) {
       return b.year - a.year;
     }
-    return a.title.localeCompare(b.title);
+    // If both have rawDate, sort by date descending
+    if (a.rawDate && b.rawDate) {
+      return b.rawDate - a.rawDate;
+    }
+    return 0;
   });
 }
