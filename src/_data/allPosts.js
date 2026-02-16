@@ -8,7 +8,20 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 export default function() {
   // Read external posts from JSON file
   const postsPath = join(__dirname, 'posts.json');
-  const externalPosts = JSON.parse(readFileSync(postsPath, 'utf-8'));
+  const externalPosts = JSON.parse(readFileSync(postsPath, 'utf-8')).map(post => {
+    const postDate = post.date ? new Date(post.date + 'T00:00:00Z') : null;
+    return {
+      ...post,
+      date: postDate
+        ? postDate.toLocaleDateString('en-US', {
+            month: 'long',
+            year: 'numeric',
+            timeZone: 'UTC'
+          })
+        : post.date,
+      rawDate: postDate
+    };
+  });
 
   // Read blog posts from src/blog directory
   const blogDir = join(__dirname, '../blog');
@@ -40,7 +53,9 @@ export default function() {
             month: 'long',
             year: 'numeric'
           }),
-          description: data.description || data.subtitle || ''
+          rawDate: postDate,
+          description: data.description || data.subtitle || '',
+          category: data.category || null
         };
       }
       // Handle new directory structure with index.md
@@ -66,7 +81,9 @@ export default function() {
               month: 'long',
               year: 'numeric'
             }),
-            description: data.description || data.subtitle || ''
+            rawDate: postDate,
+            description: data.description || data.subtitle || '',
+            category: data.category || null
           };
         }
       }
@@ -80,11 +97,15 @@ export default function() {
   // Merge external and internal posts
   const allPosts = [...externalPosts, ...internalPosts];
 
-  // Sort by year (descending), then by title
+  // Sort by year (descending), then by date (descending)
   return allPosts.sort((a, b) => {
     if (b.year !== a.year) {
       return b.year - a.year;
     }
-    return a.title.localeCompare(b.title);
+    // If both have rawDate, sort by date descending
+    if (a.rawDate && b.rawDate) {
+      return b.rawDate - a.rawDate;
+    }
+    return 0;
   });
 }

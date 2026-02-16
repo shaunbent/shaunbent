@@ -1,0 +1,55 @@
+---
+pagination:
+  data: categories
+  size: 1
+  alias: category
+permalink: /{{ category.slug }}/
+layout: base.njk
+---
+<div class="c-page">
+  <div class="c-page__columns">
+    <div class="c-page__secondary">
+      <header class="c-masthead">
+        <div class="c-masthead__image">
+          <img src="/images/shaun-bent.jpeg" alt="Headshot of Shaun Bent" />
+        </div>
+        <div class="c-masthead__bio">
+          <p class="c-masthead__bio-title">
+            <a href="https://www.shaunbent.co.uk">Shaun Bent</a>
+          </p>
+          <div class="c-masthead__bio-blurb">
+            <p>Engineering manager, design system leader and accessibility advocate from the UK.</p>
+            <p>Previously led engineering on the Encore Design System and Accessibility at Spotify, before that working at the BBC.</p>
+          </div>
+        </div>
+        <div class="c-masthead__bio-socials c-social-links">
+          <h3 class="c-social-links__title">Let's connect</h3>
+          <ul class="c-social-links__list">
+            <li><a href="https://www.linkedin.com/in/shaun-bent-075095142/">LinkedIn</a></li>
+            <li><a href="https://bsky.app/profile/shaunbent.co.uk">Bluesky</a></li>
+            <li><a href="https://instagram.com/shaunbent">Instagram</a></li>
+          </ul>
+        </div>
+      </header>
+    </div>
+    <div class="c-page__primary">
+      <main class="c-page__body">
+        <div class="c-archive">
+          <p class="c-archive__back"><a href="/">View all posts</a></p>
+          <h2 class="c-archive__title">{{ category.name }}</h2>
+          {% for year, items in category.posts | groupby("year") | reverse %}
+          <div class="c-archive__group">
+            <h3 class="c-archive__group-title">{{ year }}</h3>
+            {% for item in items %}
+            {% include "archive-item.njk" %}
+            {% endfor %}
+          </div>
+          {% endfor %}
+        </div>
+      </main>
+    </div>
+  </div>
+  <footer class="c-page__footer">
+    Made with love and hosted on <a href="https://github.com/shaunbent/shaunbent">GitHub Pages</a>.
+  </footer>
+</div>

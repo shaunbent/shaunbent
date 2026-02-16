@@ -13,12 +13,20 @@
   margin-block-start: 0;
 }
 
+.c-archive__back {
+  margin-block-end: var(--s-1);
+}
+
 .c-archive__group-title {
   font-size: var(--h4);
 }
 
 .c-archive__item {
   margin-block-start: var(--s-1);
+}
+
+.c-archive__item + .c-archive__item {
+  margin-block-start: var(--s-3);
 }
 
 .c-archive__item-details {
