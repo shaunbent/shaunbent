@@ -4,14 +4,14 @@ title: "Design systems are platform problems, not feature problems"
 date: 2026-02-23
 description: "Where you put your design system team with your organisation determines how they think, what they build, and whether the system stays a platform or the teams become a UI feature factory."
 category: "Lessons from Spotify"
-# image: "./images/Hero.webp"
-# imageAlt: "The outline of an iPhone with a notification highlighted. The message is someone called: 'Super Cool EM Friend' and reads: 'Oh my god! Check your email'"
+image: "./images/Hero.webp"
+imageAlt: "Black text on a pink background reads: Platform or Feature? The words are surrounded by illustrations to represent platform teams and feature teams"
 unlisted: true
 ---
 
-_I spent nine years at Spotify leading design systems and accessibility. During that time, I learned as much from what failed as from what succeeded. I'm sharing these insights not to critique decisions made at the time, but because I believe they're valuable and can help others navigate similar challenges. This article is part of a [series exploring those lessons](/lessons-from-spotify/)._
+_This article is part of a [series exploring lessons](/lessons-from-spotify/) from my time leading design systems and accessibility at Spotify over nearly 9 years._
 
-<!-- ![The outline of an iPhone with a notification highlighted. The message is someone called: 'Super Cool EM Friend' and reads: 'Oh my god! Check your email'](./images/Hero.webp) -->
+![Black text on a pink background reads: Platform or Feature? The words are surrounded by illustrations to represent platform teams and feature teams](./images/Hero.webp)
 
 When I published my piece on [leading through a design system reorg](https://www.shaunbent.co.uk/blog/when-the-decision-is-made-and-you-cant-change-it/), [Dave House](https://www.linkedin.com/posts/iknowdavehouse_a-design-system-reorg-tale-as-old-as-time-share-7429797760087982080-LhWl?utm_source=share&utm_medium=member_desktop&rcm=ACoAACKKGxkBIjSZ91zOEZDVIfQ8ZGbUHBa_f0A) highlighted this section:
 
