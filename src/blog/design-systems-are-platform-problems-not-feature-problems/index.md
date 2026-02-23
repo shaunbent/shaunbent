@@ -6,7 +6,6 @@ description: "Where you put your design system team with your organisation deter
 category: "Lessons from Spotify"
 image: "./images/Hero.webp"
 imageAlt: "Black text on a pink background reads: Platform or Feature? The words are surrounded by illustrations to represent platform teams and feature teams"
-unlisted: true
 ---
 
 _This article is part of a [series exploring lessons](/lessons-from-spotify/) from my time leading design systems and accessibility at Spotify over nearly 9 years._
@@ -24,7 +23,7 @@ In his article, [Ship Faster by Building Design Systems Slower](https://bigmediu
 
 > "Successful design systems move more slowly than the products they support. That's a feature, not a bug."
 
-The relationship between the two layers is what makes it work. Feature teams innovate, and the design system curates and standardises proven patterns. "Fast learns, slow remembers."
+The relationship between the two layers is what makes it work. Feature teams innovate, and the design system curates and standardises proven patterns. What Josh calls: "Fast learns, slow remembers."
 
 One way organisations optimise for these different rhythms is through their planning processes.
 
@@ -44,9 +43,9 @@ These teams didn't fail because of the people. The people were great. The enviro
 ## Why platform organisations align better
 A platform organisation has a fundamentally different mandate. Its customers are the teams building products, and its success is measured by how well it enables those teams rather than by the features it ships directly to end users.
 
-That mandate fits naturally with what a design system needs to do. Josh describes the design system as "critical front-end infrastructure," and infrastructure needs the right conditions to operate well. A platform organisation provides those conditions, letting the design system move at its natural pace, thinking at the macro level, and serving the whole organisation rather than a single part of it.
+That mandate fits naturally with what a design system needs to do. Josh describes design systems as "critical front-end infrastructure," and infrastructure needs the right conditions to operate well. A platform organisation provides those conditions, letting the design system move at its natural pace, thinking at the macro level, and serving the whole organisation rather than a single part of it.
 
-In my experience, being inside a platform organisation gave us more freedom to largely set our own planning agenda and decide how we interacted with company priorities, without always being subordinate to them.
+In my experience, being inside a platform organisation gave us more freedom to largely set our own planning agenda and decide how we interacted with company priorities, without being beholden to them.
 
 ## It's not without its challenges
 Platform organisations are not a perfect answer. Engineering-heavy organisations don't always have natural context for design systems work, and you can find yourself repeatedly explaining the value and complexity to leadership. 
