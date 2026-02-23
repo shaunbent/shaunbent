@@ -23,7 +23,7 @@ In his article, [Ship Faster by Building Design Systems Slower](https://bigmediu
 
 > "Successful design systems move more slowly than the products they support. That's a feature, not a bug."
 
-The relationship between the two layers is what makes it work. Feature teams innovate, and the design system curates and standardises proven patterns. What Josh calls: "Fast learns, slow remembers."
+The relationship between the two layers is what makes it work. Feature teams innovate, and the design system curates and standardises proven patterns. In talking about characteristics of these different layers, [Stewart Brand](https://www.youtube.com/watch?v=L7ggrxLabKQ&t=6s) explains: "the fast parts learn, the slow parts remember".
 
 One way organisations optimise for these different rhythms is through their planning processes.
 
