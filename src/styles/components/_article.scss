@@ -306,21 +306,22 @@
   justify-content: space-between;
   align-items: baseline;
   gap: var(--s-3);
-  padding-block: var(--s-2);
+  padding-block: var(--s-1);
   border-block-start: 1px solid var(--c-decorative);
 
-  &.is-active {
-    color: var(--c-text-subdued);
+  @include mq.mq($from: md) {
+    padding-block: var(--s-2);
   }
+}
+
+.c-article__more-item--is-active {
+  color: var(--c-text-subdued);
+  font-style: italic;
 }
 
 .c-article__more-item-title {
   font-size: var(--base-font-size);
   flex: 1;
-
-  .is-active & {
-    font-style: italic;
-  }
 }
 
 .c-article__more-item-date {

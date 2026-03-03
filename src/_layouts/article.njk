@@ -29,7 +29,7 @@ layout: base.njk
     <h2 class="c-article__more-title">More articles</h2>
     <ol class="c-article__more-list o-list-bare">
       {% for post in allPosts %}
-      <li class="c-article__more-item{% if post.url == page.url %} is-active{% endif %}">
+      <li class="c-article__more-item{% if post.url == page.url %} c-article__more-item--is-active{% endif %}">
         {% if post.url == page.url %}
           <span class="c-article__more-item-title">{{ post.title }}</span>
         {% else %}
