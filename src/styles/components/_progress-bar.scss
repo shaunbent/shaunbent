@@ -1,0 +1,13 @@
+.c-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--c-text-highlight);
+  transform: scaleX(0);
+  transform-origin: left;
+  z-index: 9999;
+  pointer-events: none;
+  will-change: transform;
+}
