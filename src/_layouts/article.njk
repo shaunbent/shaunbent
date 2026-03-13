@@ -2,6 +2,7 @@
 layout: base.njk
 ---
 <article class="c-article">
+  <div class="c-progress-bar" aria-hidden="true"></div>
   <header class="c-article__header">
     <h1 class="c-article__title">{{ title }}</h1>
     {% if subtitle %}
@@ -41,3 +42,42 @@ layout: base.njk
     </ol>
   </nav>
 </article>
+
+<script>
+(() => {
+  const bar = document.querySelector('.c-progress-bar');
+  const content = document.querySelector('.c-article__content');
+  if (!bar || !content) return;
+
+  let ticking = false;
+
+  const updateProgress = () => {
+    const rect = content.getBoundingClientRect();
+    const contentTop = rect.top + window.scrollY;
+    const contentHeight = rect.height;
+    const viewportHeight = window.innerHeight;
+
+    const start = contentTop;
+    const end = contentTop + contentHeight - viewportHeight;
+
+    if (end <= start) {
+      bar.style.opacity = '0';
+      ticking = false;
+      return;
+    }
+
+    const progress = Math.min(Math.max((window.scrollY - start) / (end - start), 0), 1);
+    bar.style.transform = `scaleX(${progress})`;
+    ticking = false;
+  };
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(updateProgress);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  updateProgress();
+})();
+</script>
