@@ -10,7 +10,7 @@
     "start:eleventy": "eleventy --serve",
     "build": "npm-run-all build:*",
     "build:sass": "sass --style=compressed src/styles/main.scss:_site/css/style.css",
-    "build:eleventy": "eleventy",
+    "build:eleventy": "NODE_ENV=production eleventy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -20,6 +20,7 @@
     "@11ty/eleventy": "3.1.2",
     "@11ty/eleventy-img": "6.0.4",
     "gray-matter": "4.0.3",
+    "html-minifier-terser": "7.2.0",
     "markdown-it-attrs": "4.3.1",
     "markdown-it-image-figures": "2.1.1",
     "npm-run-all": "4.1.5",

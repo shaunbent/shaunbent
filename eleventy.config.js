@@ -4,6 +4,9 @@ import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
 import Image from '@11ty/eleventy-img';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { minify } from 'html-minifier-terser';
+
+const isProduction = process.env.NODE_ENV === 'production';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -143,6 +146,25 @@ export default function(eleventyConfig) {
   eleventyConfig.addCollection('blog', (collectionApi) => {
     return collectionApi.getFilteredByGlob('src/blog/**/*.md');
   });
+
+  // Minify HTML output in production
+  if (isProduction) {
+    eleventyConfig.addTransform('htmlmin', async function(content) {
+      if (this.page.outputPath && this.page.outputPath.endsWith('.html')) {
+        return await minify(content, {
+          collapseWhitespace: true,
+          removeComments: true,
+          removeRedundantAttributes: true,
+          removeScriptTypeAttributes: true,
+          removeStyleLinkTypeAttributes: true,
+          useShortDoctype: true,
+          minifyCSS: true,
+          minifyJS: true,
+        });
+      }
+      return content;
+    });
+  }
 
   return {
     dir: {
