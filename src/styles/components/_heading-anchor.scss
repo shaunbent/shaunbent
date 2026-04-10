@@ -29,16 +29,22 @@
   /**
    * Width matches the page gutter (article padding + grid gutter)
    * so the icon centres within the available gutter space.
+   * Reduced on the smallest screens to avoid touching the viewport edge.
    */
-  left: calc(-1 * var(--s-4));
+  left: calc(-1 * var(--s-3));
   top: 0;
-  width: var(--s-4);
+  width: var(--s-3);
   height: 1lh;
   color: var(--c-text-subdued);
   opacity: 0;
   transition: opacity 0.15s ease;
   text-decoration: none;
   border-radius: 4px;
+
+  @include mq.mq($from: sm) {
+    left: calc(-1 * var(--s-4));
+    width: var(--s-4);
+  }
 
   @include mq.mq($from: md) {
     left: -36px;
@@ -85,29 +91,34 @@
 }
 
 /*------------------------------------*\
-    # HEADING ANCHOR TOOLTIP
+    # HEADING ANCHOR TOAST
 \*------------------------------------*/
 
-.c-heading-anchor__tooltip {
-  position: absolute;
+/**
+ * Toast notification shown at the bottom of the viewport
+ * when a heading link is copied to clipboard.
+ */
+
+.c-heading-anchor__toast {
+  position: fixed;
+  bottom: var(--s-3);
   left: 50%;
-  top: 100%;
   transform: translateX(-50%);
-  margin-top: var(--s--1);
-  padding: var(--s--1) var(--s-1);
-  font-size: 12px;
+  padding: var(--s-1) var(--s-2);
+  font-size: 14px;
   line-height: 1;
   white-space: nowrap;
   color: var(--c-bg);
   background-color: var(--c-text);
   border-radius: 4px;
   pointer-events: none;
+  z-index: 1;
   opacity: 0;
-  animation: heading-anchor-fade 1.5s ease forwards;
+  animation: heading-anchor-toast 1.5s ease forwards;
 }
 
-@keyframes heading-anchor-fade {
-  0% { opacity: 0; transform: translateX(-50%) translateY(-4px); }
+@keyframes heading-anchor-toast {
+  0% { opacity: 0; transform: translateX(-50%) translateY(var(--s-1)); }
   15% { opacity: 1; transform: translateX(-50%) translateY(0); }
   85% { opacity: 1; transform: translateX(-50%) translateY(0); }
   100% { opacity: 0; transform: translateX(-50%) translateY(0); }
