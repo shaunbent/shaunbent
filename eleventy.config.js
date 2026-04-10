@@ -1,5 +1,6 @@
 import markdownItImageFigures from 'markdown-it-image-figures';
 import markdownItAttrs from 'markdown-it-attrs';
+import markdownItAnchor from 'markdown-it-anchor';
 import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
 import Image from '@11ty/eleventy-img';
 import path from 'path';
@@ -18,6 +19,16 @@ export default function(eleventyConfig) {
     mdLib.use(markdownItImageFigures, {
       figcaption: 'title',  // Use title attribute for caption, preserving alt text
       copyAttrs: 'class'    // Copy class attributes to figure element
+    });
+    mdLib.use(markdownItAnchor, {
+      level: [2, 3, 4],
+      permalink: markdownItAnchor.permalink.linkInsideHeader({
+        class: 'c-heading-anchor',
+        symbol: '<svg class="c-heading-anchor__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>',
+        placement: 'before',
+        ariaHidden: false,
+        renderAttrs: () => ({ 'aria-label': 'Copy link to this section' }),
+      }),
     });
   });
 

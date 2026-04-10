@@ -81,3 +81,35 @@ layout: base.njk
   updateProgress();
 })();
 </script>
+
+<script>
+(() => {
+  const anchors = document.querySelectorAll('.c-heading-anchor');
+  if (!anchors.length) return;
+
+  anchors.forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
+      e.preventDefault();
+      const hash = anchor.getAttribute('href');
+      const id = hash.replace(/^#/, '');
+      const target = document.getElementById(id);
+      if (!target) return;
+
+      history.replaceState(null, '', hash);
+      target.scrollIntoView({ behavior: 'smooth' });
+
+      const url = window.location.href;
+      navigator.clipboard.writeText(url).then(() => {
+        const tooltip = document.createElement('span');
+        tooltip.className = 'c-heading-anchor__tooltip';
+        tooltip.textContent = 'Copied!';
+        tooltip.setAttribute('role', 'status');
+        tooltip.setAttribute('aria-live', 'polite');
+        anchor.appendChild(tooltip);
+
+        setTimeout(() => tooltip.remove(), 1500);
+      });
+    });
+  });
+})();
+</script>
