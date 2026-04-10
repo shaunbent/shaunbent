@@ -133,6 +133,15 @@
 }
 
 /**
+ * Heading anchors
+ * Headings with anchors need relative positioning and scroll offset.
+ */
+.c-article__content :is(h2, h3, h4):has(> .c-heading-anchor) {
+  position: relative;
+  scroll-margin-top: var(--s-3);
+}
+
+/**
  * Links in article content
  * Only override underline offset for larger body text
  */

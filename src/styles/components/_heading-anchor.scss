@@ -5,17 +5,20 @@
 \*------------------------------------*/
 
 /**
- * GitHub-style heading anchors for article content.
+ * GitHub-style heading anchors for content.
  * Renders a link icon in the left gutter on hover,
  * with a tooltip confirmation when the URL is copied.
  *
- * The anchor sits inside the heading element, so it inherits
+ * The anchor sits inside a heading element, so it inherits
  * the heading's line-height. Using `height: 1lh` centres the
  * icon against the first line of text, even for multi-line headings.
  *
  * On fine pointer devices (mouse), the anchor is hidden by default
  * and revealed on heading hover/focus. On coarse pointer devices
  * (touch), the anchor is always visible since there is no hover.
+ *
+ * The parent heading must have `position: relative` for the anchor
+ * to position correctly in the gutter.
  */
 
 .c-heading-anchor {
@@ -23,6 +26,10 @@
   align-items: center;
   justify-content: center;
   position: absolute;
+  /**
+   * Width matches the page gutter (article padding + grid gutter)
+   * so the icon centres within the available gutter space.
+   */
   left: calc(-1 * var(--s-4));
   top: 0;
   width: var(--s-4);
@@ -49,21 +56,10 @@
 }
 
 /**
- * Headings containing an anchor need relative positioning
- * so the absolutely-positioned anchor stays in the gutter.
+ * Reveal anchor on heading hover/focus.
  */
-.c-article__content h2:has(.c-heading-anchor),
-.c-article__content h3:has(.c-heading-anchor),
-.c-article__content h4:has(.c-heading-anchor) {
-  position: relative;
-  scroll-margin-top: var(--s-3);
-}
-
-/**
- * Reveal anchor on hover/focus for pointer devices.
- */
-.c-article__content :is(h2, h3, h4):hover > .c-heading-anchor,
-.c-article__content :is(h2, h3, h4):focus-within > .c-heading-anchor,
+:is(h2, h3, h4):hover > .c-heading-anchor,
+:is(h2, h3, h4):focus-within > .c-heading-anchor,
 .c-heading-anchor:focus {
   opacity: 1;
 }
