@@ -100,14 +100,14 @@ layout: base.njk
 
       const url = window.location.href;
       navigator.clipboard.writeText(url).then(() => {
-        const tooltip = document.createElement('span');
-        tooltip.className = 'c-heading-anchor__tooltip';
-        tooltip.textContent = 'Copied!';
-        tooltip.setAttribute('role', 'status');
-        tooltip.setAttribute('aria-live', 'polite');
-        anchor.appendChild(tooltip);
+        const toast = document.createElement('span');
+        toast.className = 'c-heading-anchor__toast';
+        toast.textContent = '🔗 Link copied!';
+        toast.setAttribute('role', 'status');
+        toast.setAttribute('aria-live', 'polite');
+        document.body.appendChild(toast);
 
-        setTimeout(() => tooltip.remove(), 1500);
+        setTimeout(() => toast.remove(), 1500);
       });
     });
   });
