@@ -1,0 +1,118 @@
+@use '../tools/mq';
+
+/*------------------------------------*\
+    # HEADING ANCHOR
+\*------------------------------------*/
+
+/**
+ * GitHub-style heading anchors for article content.
+ * Renders a link icon in the left gutter on hover,
+ * with a tooltip confirmation when the URL is copied.
+ *
+ * The anchor sits inside the heading element, so it inherits
+ * the heading's line-height. Using `height: 1lh` centres the
+ * icon against the first line of text, even for multi-line headings.
+ *
+ * On fine pointer devices (mouse), the anchor is hidden by default
+ * and revealed on heading hover/focus. On coarse pointer devices
+ * (touch), the anchor is always visible since there is no hover.
+ */
+
+.c-heading-anchor {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: calc(-1 * var(--s-4));
+  top: 0;
+  width: var(--s-4);
+  height: 1lh;
+  color: var(--c-text-subdued);
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  text-decoration: none;
+  border-radius: 4px;
+
+  @include mq.mq($from: md) {
+    left: -36px;
+    width: 28px;
+  }
+
+  &:hover {
+    color: var(--c-text-highlight);
+    background-color: var(--c-antiflash-white);
+  }
+
+  [data-theme="dark"] &:hover {
+    background-color: var(--c-outer-space);
+  }
+}
+
+/**
+ * Headings containing an anchor need relative positioning
+ * so the absolutely-positioned anchor stays in the gutter.
+ */
+.c-article__content h2:has(.c-heading-anchor),
+.c-article__content h3:has(.c-heading-anchor),
+.c-article__content h4:has(.c-heading-anchor) {
+  position: relative;
+  scroll-margin-top: var(--s-3);
+}
+
+/**
+ * Reveal anchor on hover/focus for pointer devices.
+ */
+.c-article__content :is(h2, h3, h4):hover > .c-heading-anchor,
+.c-article__content :is(h2, h3, h4):focus-within > .c-heading-anchor,
+.c-heading-anchor:focus {
+  opacity: 1;
+}
+
+/**
+ * Always show anchors on coarse pointer (touch) devices
+ * where hover is not available.
+ */
+@media (any-pointer: coarse) {
+  .c-heading-anchor {
+    opacity: 1;
+  }
+}
+
+.c-heading-anchor__icon {
+  width: 14px;
+  height: 14px;
+
+  @include mq.mq($from: md) {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/*------------------------------------*\
+    # HEADING ANCHOR TOOLTIP
+\*------------------------------------*/
+
+.c-heading-anchor__tooltip {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  margin-top: var(--s--1);
+  padding: var(--s--1) var(--s-1);
+  font-size: 12px;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--c-bg);
+  background-color: var(--c-text);
+  border-radius: 4px;
+  pointer-events: none;
+  opacity: 0;
+  animation: heading-anchor-fade 1.5s ease forwards;
+}
+
+@keyframes heading-anchor-fade {
+  0% { opacity: 0; transform: translateX(-50%) translateY(-4px); }
+  15% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  85% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  100% { opacity: 0; transform: translateX(-50%) translateY(0); }
+}
