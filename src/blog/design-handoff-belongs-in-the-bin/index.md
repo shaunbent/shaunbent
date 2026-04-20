@@ -2,7 +2,7 @@
 layout: article.njk
 title: "Design handoff belongs in the bin"
 date: 2026-04-20
-description: "Where you put your design system team with your organisation determines how they think, what they build, and whether the system stays a platform or the teams become a UI feature factory."
+description: "Improving the handoff process is a worthy goal, but it's the wrong one. The goal should be to make handoff irrelevant entirely, and here's how you get there."
 category: "Lessons from Spotify"
 image: "./images/HeroSocial.webp"
 imageAlt: "A picture of a waterfall with text overlaid in a blue box. The text reads: 'Design handoff belongs in the bin'"
@@ -56,3 +56,5 @@ Not every team is ready for this kind of change. The organisational environment,
 Small steps can compound. Invite an engineer to your next design critique. Ask a designer to sit in on a technical feasibility conversation. Put one piece of design work on the same board as the engineering tickets. Each of these things is modest on its own. Across a year, they start to shift how a team thinks about the relationship between design and engineering.
 
 **What is one step you can take today to make the handoff irrelevant?**
+
+_Header photo by [SLNC](https://unsplash.com/@riverse) on [Unsplash](https://unsplash.com/photos/waterfalls-at-the-forest-during-daytime-xiEMqQYiIZw)_
