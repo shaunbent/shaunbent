@@ -17,9 +17,11 @@ Design handoff is a remnant of waterfall workflows. It made sense when design an
 
 Handoff exists because we continue to treat design and engineering as distinct problems to be solved separately. The moment you start treating them as a single product problem to be solved together, the handoff no longer makes sense.
 
+The conditions for change have never been better. AI tools are putting designers closer to code than ever before. Prototyping in code, generating working components, and iterating in the same medium that engineering builds in. The gap is closing naturally. The question is whether teams are being intentional about it or letting it happen by accident.
+
 ## Closing the gap
 
-Ok, I made that sound straightforward. In practice, it requires changing how teams are structured, how work flows through them, and how disciplines relate to each other day to day. For many teams and organisations, this can be a significant cultural shift.
+So what does being deliberate about it actually look like? In practice, it requires changing how teams are structured, how work flows through them, and how disciplines relate to each other day to day. For many teams and organisations, this can be a significant cultural shift.
 
 A good place to start is rethinking the assumption that design must be largely complete before engineering gets involved. Two disciplines working in sequence is not a law of nature; it is a habit. And like most habits, it can be broken with will and the right structures in place.
 
@@ -33,9 +35,11 @@ When this model is working well, each phase has a lead discipline, but both are 
 
 ## The adjustment period is real
 
-Ok, I did it again, I made it sound straightforward, like flipping a switch. I've led teams through this cultural shift, and I won't pretend it's easy. But when it clicks, you can’t imagine working any other way.
+Ok, I made that sound straightforward, like flipping a switch. I've led teams through this cultural shift, and I won't pretend it's easy. But when it clicks, you can’t imagine working any other way.
 
 In the beginning, it can feel really awkward. Early engineering input can initially feel stifling to creativity. An engineer pointing out that something is technically challenging or goes against a platform convention can feel uncomfortable for a designer who is not used to this kind of feedback so early in the process. It takes time to reframe it as saving a designer time rather than constraining their work. Why invest significant effort in a design direction that’s not feasible?
+
+As more designers begin to use AI tools to prototype and work in code, they are already operating in the world of engineering to some degree. The shared context makes early technical feedback feel less like a challenge to the design and more like a natural part of the conversation.
 
 In my experience, this only works when there is mutual respect and understanding between disciplines. When engineering genuinely understands and respects what design is trying to achieve, and the processes designers follow. When design understands that there are technical tradeoffs which need to be balanced, early collaboration becomes a strength rather than a source of friction.
 
@@ -47,15 +51,15 @@ Depending on your organisation, your team's maturity, and the attitudes of the l
 
 I’ve worked with design leaders who place tremendous value on keeping design a centralised, protected function, separate from engineering. Almost as if keeping design isolated as its own independent function is a measure of success. At the same time, engineering leaders want their engineers to focus entirely on code output rather than spending time working alongside designers. Both of these mindsets create walls between disciplines that slow teams down and introduce waste that better collaboration would prevent.
 
-Good leaders create the conditions and set expectations that enable cross-disciplinary collaboration. Shared boards where design work sits alongside engineering tickets. Open design critiques where engineers are not just welcome but expected to attend, present, and give feedback. Processes that require both disciplines to be involved in the problem from the start. And when someone is struggling in isolation, a gentle nudge: Have you spoken to an engineer about this? The culture shift is not something you mandate. It happens gradually, through practice, until one day teams cannot remember working any other way.
+Good leaders create the conditions and set expectations that enable cross-disciplinary collaboration. Shared boards where design work sits alongside engineering tickets. Open design critiques where engineers are not just welcome but expected to attend, present, and give feedback. Processes that require both disciplines to be involved in the problem from the start. And when someone is struggling in isolation, a gentle nudge: Have you spoken to an engineer about this? A culture shift isn't something you mandate. It happens gradually, through practice, until one day teams cannot remember working any other way.
 
 ## Small steps towards a better world
 
-Not every team is ready for this kind of change. The organisational environment, the maturity of both disciplines, and leadership appetite all affect what is possible right now. That is fine. Wholesale transformation is not the only option, and pretending otherwise sets teams up to feel like they have failed when the reality is that this takes time.
-
-It is also worth acknowledging that our industry is already moving in this direction, even if slowly. AI tools are putting designers closer to code than ever before. Prototyping in code, generating working components, and iterating directly in the same medium as engineers. Code is becoming a shared medium, which makes the conversations I'm describing feel less like a cultural leap and more like a natural next step. The conditions are becoming better than they have ever been to change the way we work and leave irrelevant old practices behind.
+Not every team is ready for this kind of change. The organisational environment, the maturity of both disciplines, and leadership appetite all affect what is possible right now. That is fine. Wholesale transformation isn't the only option, and suggesting it is can make teams feel like they have failed when the reality is that this takes time.
 
 Small steps can compound. Invite an engineer to your next design critique. Ask a designer to sit in on a technical feasibility conversation. Put one piece of design work on the same board as the engineering tickets. Each of these things is modest on its own. Across a year, they start to shift how a team thinks about the relationship between design and engineering.
+
+Pay attention to where the gap is already closing in your team. Designers who prototype in code or use AI tools to generate components are already working closer to engineering than they might realise. That's a foundation worth building on.
 
 **What is one step you can take today to make the handoff irrelevant?**
 
