@@ -47,6 +47,8 @@ A culture where engineers dismiss design nuance, or close down ideas prematurely
 
 > Design doesn’t have a monopoly on good ideas
 
+## When leaders get in the way
+
 Depending on your organisation, your team's maturity, and the attitudes of the leaders around you, this way of working can take years to feel natural rather than forced. We are talking about changing ingrained behaviours, and your organisational environment will shape how quickly that happens. 
 
 I’ve worked with design leaders who place tremendous value on keeping design a centralised, protected function, separate from engineering. Almost as if keeping design isolated as its own independent function is a measure of success. At the same time, engineering leaders want their engineers to focus entirely on code output rather than spending time working alongside designers. Both of these mindsets create walls between disciplines that slow teams down and introduce waste that better collaboration would prevent.
