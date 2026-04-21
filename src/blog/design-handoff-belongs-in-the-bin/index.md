@@ -29,6 +29,10 @@ What if we involved engineering right from the start and throughout the design p
 
 This parallel approach can surface things early that would otherwise be discovered much later. Sometimes, engineering discovers that something they initially believed would be technically challenging is straightforward, or that the platform provides it out of the box. Sometimes they uncover that something is not feasible, and the design needs to change. The crucial difference is that this discovery happens alongside design, not after a leader has signed off on something that cannot be built.
 
+> "Design doesn't have a monopoly on good ideas."
+
+Early engineering input isn't just about catching technical problems before they become expensive. Engineers bring a different perspective to how something could work, and some of the best ideas come from that collision of disciplines.
+
 There is a practical bonus here: prototypes and early engineering thinking sometimes feed directly into the final implementation. Work done in the exploration phase does not have to be thrown away.
 
 When this model is working well, each phase has a lead discipline, but both are present throughout. The transition between discovery and delivery is a gradual shift in which discipline leads, not a cliff-edge where design stops and engineering starts. By the time engineering is in the delivery driving seat, they have been involved from the start, and they have as much knowledge as design; there is nothing to hand over. ✨
@@ -44,8 +48,6 @@ As more designers begin to use AI tools to prototype and work in code, they are 
 In my experience, this only works when there is mutual respect and understanding between disciplines. When engineering genuinely understands and respects what design is trying to achieve, and the processes designers follow. When design understands that there are technical tradeoffs which need to be balanced, early collaboration becomes a strength rather than a source of friction.
 
 A culture where engineers dismiss design nuance, or close down ideas prematurely because they seem time-consuming to implement, makes early collaboration counterproductive. Both disciplines need to develop an understanding of each other's worlds. A shared design vision can help considerably, something everyone is working towards together, so that engineering input serves the same goal rather than pulling against it.
-
-> Design doesn’t have a monopoly on good ideas
 
 ## When leaders get in the way
 
