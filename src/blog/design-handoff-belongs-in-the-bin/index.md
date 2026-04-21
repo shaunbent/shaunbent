@@ -27,6 +27,10 @@ A good place to start is rethinking the assumption that design must be largely c
 
 What if we involved engineering right from the start and throughout the design process? Once we have a clear outline of what we’re building, whether it’s a new component, a feature, or an update to something existing, we can start working in parallel. Whilst design focuses on visual and interaction design, and user experience, engineering can begin prototyping, exploring the more technically challenging aspects, and testing feasibility. Both disciplines, working simultaneously, sharing back and forth, continuously.
 
+**[INSERT DIAGRAM]**
+
+[Juli Sombat](https://www.linkedin.com/in/julianne-sombat/), Encore's Design Lead, created this diagram to visualise exactly how that parallel approach plays out across the length of a project. It shows something that is difficult to put into words: as the work progresses from discovery to delivery, engineering gradually becomes more involved whilst design effort naturally decreases. The lead shifts, but both disciplines remain present throughout.
+
 This parallel approach can surface things early that would otherwise be discovered much later. Sometimes, engineering discovers that something they initially believed would be technically challenging is straightforward, or that the platform provides it out of the box. Sometimes they uncover that something is not feasible, and the design needs to change. The crucial difference is that this discovery happens alongside design, not after a leader has signed off on something that cannot be built.
 
 > "Design doesn't have a monopoly on good ideas."
