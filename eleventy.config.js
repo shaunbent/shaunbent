@@ -36,7 +36,7 @@ export default function(eleventyConfig) {
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     extensions: 'html',
     formats: ['webp', 'jpeg'], // WebP for modern browsers, JPEG fallback
-    widths: [400, 800, 1200],  // Mobile, tablet, desktop
+    widths: [400, 800, 1200, 1840],  // Mobile, tablet, desktop
     defaultAttributes: {
       loading: 'lazy',
       decoding: 'async',
@@ -132,7 +132,7 @@ export default function(eleventyConfig) {
         outputDir: './_site/images/og/',
         urlPath: '/images/og/',
         sharpJpegOptions: {
-          quality: 90,
+          quality: 100,
         },
         filenameFormat: function (id, src, width, format) {
           const extension = path.extname(src);

@@ -4,12 +4,12 @@ title: "Design handoff belongs in the bin"
 date: 2026-04-20
 description: "Improving the handoff process is a worthy goal, but it's the wrong one. The goal should be to make handoff irrelevant entirely, and here's how you get there."
 category: "Lessons from Spotify"
-image: "./images/HeroSocial.webp"
+image: "./images/hero-social.webp"
 imageAlt: "A picture of a waterfall with text overlaid in a blue box. The text reads: 'Design handoff belongs in the bin'"
 unlisted: true
 ---
 
-![A picture of a waterfall](./images/Hero.webp)
+![A picture of a waterfall](./images/hero.webp)
 
 We spend a lot of energy trying to improve design handoff. Better documentation, tighter specs, more thorough annotations. And yes, if you are going to hand off, doing it well is better than doing it badly. But what if we aimed to remove handoffs entirely?
 
@@ -27,7 +27,7 @@ A good place to start is rethinking the assumption that design must be largely c
 
 What if we involved engineering right from the start and throughout the design process? Once we have a clear outline of what we’re building, whether it’s a new component, a feature, or an update to something existing, we can start working in parallel. Whilst design focuses on visual and interaction design, and user experience, engineering can begin prototyping, exploring the more technically challenging aspects, and testing feasibility. Both disciplines, working simultaneously, sharing back and forth, continuously.
 
-**[INSERT DIAGRAM]**
+![A graph showing the involvement and effort of design and engineering disciplines across the progress of a project. The horizontal axis shows project progress, the vertical axis shows involvement and effort. The graph is divided into two phases: Discovery, where design leads and engineering supports, shown by a large design area that gradually decreases left to right; and Delivery, where engineering leads and design supports, shown by a large engineering area that gradually decreases right to left. The diagonal split between the two colours illustrates the gradual shift in who is leading rather than an abrupt handoff.](./images/discovery-delivery.webp)
 
 [Juli Sombat](https://www.linkedin.com/in/julianne-sombat/), Encore's Design Lead, created this diagram to visualise exactly how that parallel approach plays out across the length of a project. It shows something that is difficult to put into words: as the work progresses from discovery to delivery, engineering gradually becomes more involved whilst design effort naturally decreases. The lead shifts, but both disciplines remain present throughout.
 
@@ -55,7 +55,7 @@ A culture where engineers dismiss design nuance, or close down ideas prematurely
 
 ## When leaders get in the way
 
-Depending on your organisation, your team's maturity, and the attitudes of the leaders around you, this way of working can take years to feel natural rather than forced. We are talking about changing ingrained behaviours, and your organisational environment will shape how quickly that happens. 
+Depending on your organisation, your team's maturity, and the attitudes of the leaders around you, this way of working can take years to feel natural rather than forced. We are talking about changing ingrained behaviours, and your organisational environment will shape how quickly that happens.
 
 I’ve worked with design leaders who place tremendous value on keeping design a centralised, protected function, separate from engineering. Almost as if keeping design isolated as its own independent function is a measure of success. At the same time, engineering leaders want their engineers to focus entirely on code output rather than spending time working alongside designers. Both of these mindsets create walls between disciplines that slow teams down and introduce waste that better collaboration would prevent.
 
