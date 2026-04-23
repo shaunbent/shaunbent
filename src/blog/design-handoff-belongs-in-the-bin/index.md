@@ -1,12 +1,10 @@
 ---
 layout: article.njk
 title: "Design handoff belongs in the bin"
-date: 2026-04-20
+date: 2026-04-23
 description: "Improving the handoff process is a worthy goal, but it's the wrong one. The goal should be to make handoff irrelevant entirely, and here's how you get there."
-category: "Lessons from Spotify"
 image: "./images/hero-social.webp"
 imageAlt: "A picture of a waterfall with text overlaid in a blue box. The text reads: 'Design handoff belongs in the bin'"
-unlisted: true
 ---
 
 ![A picture of a waterfall](./images/hero.webp)
