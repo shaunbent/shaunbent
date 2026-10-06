@@ -1,10 +1,45 @@
 [
   {
     "year": 2026,
+    "title": "Design handoff belongs in the bin",
+    "url": "https://53degrees.studio/posts/design-handoff-belongs-in-the-bin/",
+    "description": "Improving the handoff process is a worthy goal, but it's the wrong one. The goal should be to make handoff irrelevant entirely, and here's how you get there.",
+    "date": "2026-04-23"
+  },
+  {
+    "year": 2026,
+    "title": "Design systems are platform problems, not feature problems",
+    "url": "https://53degrees.studio/posts/design-systems-are-platform-problems-not-feature-problems/",
+    "description": "Where you put your design system team with your organisation determines how they think, what they build, and whether the system stays a platform or the teams become a UI feature factory.",
+    "date": "2026-02-23"
+  },
+  {
+    "year": 2026,
+    "title": "When the Decision Is Made, and You Can't Change It",
+    "url": "https://53degrees.studio/posts/when-the-decision-is-made-and-you-cant-change-it/",
+    "description": "Sometimes decisions are made for you. They're clearly wrong, and you can't change them. This is about how you lead anyway.",
+    "date": "2026-02-16"
+  },
+  {
+    "year": 2026,
     "title": "Handling breaking changes in a design system without causing chaos",
     "url": "https://zeroheight.com/blog/handling-breaking-changes-in-a-design-system-without-causing-chaos/",
     "description": "Breaking changes feel like progress to your team but disruption to your customers. How do you keep your system healthy without losing trust? It requires discipline, pragmatism, and knowing when to bend the rules.",
     "date": "2026-01-22"
+  },
+  {
+    "year": 2026,
+    "title": "Is There Too Much Design in Design Systems?",
+    "url": "https://53degrees.studio/posts/is-there-too-much-design-in-design-systems/",
+    "description": "Why are we hiring so many designers? Most design system roles are design-focused, but the biggest value comes from code. Are we building design systems, or just designing them?",
+    "date": "2026-01-12"
+  },
+  {
+    "year": 2025,
+    "title": "Why Federated Design Systems Keep Failing",
+    "url": "https://53degrees.studio/posts/why-federated-design-systems-keep-failing/",
+    "description": "Why do federated design systems keep failing? I watched it happen twice at Spotify. Here's what actually happened, where they broke down, and why centralised models usually work better.",
+    "date": "2025-12-08"
   },
   {
     "year": 2017,
