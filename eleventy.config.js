@@ -53,6 +53,13 @@ export default function(eleventyConfig) {
 
   // Copy static assets to output directory
   eleventyConfig.addPassthroughCopy('src/images');
+  // Images from articles that moved to 53degrees.studio. Old social cards and
+  // link previews still point at these URLs, so they are published byte-for-byte
+  // at their original paths (/blog/<hash>-<width>.<ext>, /images/og/<name>.jpeg).
+  eleventyConfig.addPassthroughCopy({
+    'src/legacy-media/blog': 'blog',
+    'src/legacy-media/images/og': 'images/og'
+  });
   eleventyConfig.addPassthroughCopy('*.png');
   eleventyConfig.addPassthroughCopy('*.svg');
   eleventyConfig.addPassthroughCopy('*.ico');
