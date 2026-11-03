@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ title | default("Shaun Bent | Engineering Manager, Design System Leader & Accessibility Advocate") }}</title>
+  <title>{{ title | default(site.title) }}</title>
   <link rel="stylesheet" href="/css/style.css">
   <meta name="description" content="{{ description | default(site.description) }}">
   {% if originalUrl %}

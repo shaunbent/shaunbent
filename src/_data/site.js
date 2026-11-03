@@ -1,9 +1,10 @@
 export default {
   // Basic site info
   name: 'Shaun Bent',
-  title: 'Shaun Bent | Engineering Manager, Design System Leader & Accessibility Advocate',
-  description: 'Shaun Bent — an engineering manager, design system leader and accessibility advocate from the UK.',
+  title: 'Shaun Bent | Design System Consultant & Coach',
+  description: 'Shaun Bent — a design system consultant and coach based in Manchester, working through Studio 53° with organisations anywhere.',
   url: 'https://shaunbent.co.uk',
+  year: new Date().getFullYear(),
   lang: 'en',
   locale: 'en_GB',
 
@@ -12,7 +13,7 @@ export default {
     name: 'Shaun Bent',
     url: 'https://shaunbent.co.uk',
     email: null,
-    jobTitle: 'Engineering Manager',
+    jobTitle: 'Design System Consultant and Coach',
     sameAs: [
       'https://www.linkedin.com/in/shaun-bent-075095142/',
       'https://bsky.app/profile/shaunbent.co.uk',
@@ -31,7 +32,7 @@ export default {
   // Default images for social sharing
   image: {
     default: '/images/shaun-bent.jpeg',
-    alt: 'Shaun Bent - Engineering Manager, Design System Leader & Accessibility Advocate',
+    alt: 'Shaun Bent - Design System Consultant & Coach',
     width: 1200,
     height: 630
   },

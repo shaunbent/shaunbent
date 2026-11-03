@@ -13,7 +13,7 @@ layout: base.njk
             <a href="https://www.shaunbent.co.uk">Shaun Bent</a>
           </p>
           <div class="c-masthead__bio-blurb">
-            <p>Engineering manager, design system leader and accessibility advocate from the UK.</p>
+            <p>Design system consultant and coach, based in Manchester. Through <a href="https://53degrees.studio">Studio 53°</a> I work on what components and tokens alone can't fix: collaboration across disciplines, fit with the company's culture, and the leadership a system needs to last.</p>
             <p>Previously led engineering on the Encore Design System and Accessibility at Spotify, before that working at the BBC.</p>
           </div>
         </div>
@@ -41,6 +41,17 @@ layout: base.njk
           {% endfor %}
         </div>
         <div class="o-item-list">
+          <h3>Podcasts</h3>
+          {% for year, items in podcasts | groupby("year") | reverse %}
+          <div class="c-archive__group">
+            <h3 class="c-archive__group-title">{{ year }}</h3>
+            {% for item in items %}
+            {% include "archive-item.njk" %}
+            {% endfor %}
+          </div>
+          {% endfor %}
+        </div>
+        <div class="o-item-list">
           <h3>Talks</h3>
           {% for year, items in talks | groupby("year") | reverse %}
           <div class="c-archive__group">
@@ -56,6 +67,7 @@ layout: base.njk
     </div>
   </div>
   <footer class="c-page__footer">
-    🖤 Made with love and hosted on <a href="https://github.com/shaunbent/shaunbent">GitHub Pages</a>.
+    <p>© {{ site.year }} Shaun Bent. All rights reserved.</p>
+    <p>🖤 Made with love and hosted on <a href="https://github.com/shaunbent/shaunbent">GitHub Pages</a>.</p>
   </footer>
 </div>
