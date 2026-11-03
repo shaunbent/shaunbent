@@ -1,6 +1,20 @@
 [
   {
     "year": 2026,
+    "title": "Building a system of systems: What we didn't see coming",
+    "url": "https://53degrees.studio/posts/building-a-system-of-systems-what-we-didnt-see-coming/",
+    "description": "The costs we never planned for: the hidden load on the core team, local systems that stalled, a programme that came apart, and success the model had nowhere to put.",
+    "date": "2026-11-02"
+  },
+  {
+    "year": 2026,
+    "title": "Building a system of systems: What we didn't know in 2019",
+    "url": "https://53degrees.studio/posts/building-a-system-of-systems-what-we-didnt-know/",
+    "description": "Six years after introducing the system of systems model, what it became in practice, where the original vision held, and where it gave way.",
+    "date": "2026-10-12"
+  },
+  {
+    "year": 2026,
     "title": "Design handoff belongs in the bin",
     "url": "https://53degrees.studio/posts/design-handoff-belongs-in-the-bin/",
     "description": "Improving the handoff process is a worthy goal, but it's the wrong one. The goal should be to make handoff irrelevant entirely, and here's how you get there.",
